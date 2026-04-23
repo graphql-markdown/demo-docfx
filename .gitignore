@@ -1,0 +1,5 @@
+docs/graphql/
+_site/
+node_modules/
+.vscode/
+.DS_Store

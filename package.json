@@ -1,0 +1,19 @@
+{
+  "name": "demo-docfx",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "clean": "rm -rf ./docs/graphql ./_site",
+    "generate": "node ./scripts/generate-docs.mjs",
+    "dev": "npm run generate && docfx docfx.json --serve",
+    "build": "npm run generate && docfx docfx.json"
+  },
+  "dependencies": {
+    "@graphql-markdown/cli": "file:../graphql-markdown/packages/cli",
+    "@graphql-markdown/formatters": "file:../graphql-markdown/packages/formatters",
+    "@graphql-markdown/utils": "file:../graphql-markdown/packages/utils",
+    "@graphql-tools/graphql-file-loader": "^8.1.13",
+    "graphql": "^16.13.2"
+  }
+}
