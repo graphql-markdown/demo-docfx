@@ -2,6 +2,8 @@
 
 This project demonstrates how to generate GraphQL documentation with GraphQL-Markdown for a [DocFX](https://dotnet.github.io/docfx/) site using the modern template.
 
+**Live demo:** [graphql-markdown.dev/demo-docfx](https://graphql-markdown.dev/demo-docfx/)
+
 ## Quick start
 
 ```bash
