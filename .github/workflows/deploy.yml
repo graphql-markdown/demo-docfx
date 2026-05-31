@@ -1,0 +1,50 @@
+name: Deploy to GitHub Pages
+
+run-name: "Deploy to GitHub Pages by @${{ github.actor }}"
+
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    name: Build and deploy
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "9.x"
+
+      - name: Install docfx
+        run: dotnet tool install -g docfx
+
+      - name: Install Node dependencies
+        run: npm ci
+
+      - name: Generate GraphQL docs
+        run: npm run generate
+
+      - name: Build
+        run: docfx docfx.json
+
+      - name: Configure git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site
