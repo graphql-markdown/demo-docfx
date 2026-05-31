@@ -1,0 +1,122 @@
+{
+  "README.html": {
+    "href": "README.html",
+    "title": "GraphQL-Markdown + DocFX demo | GraphQL Documentation with Docfx",
+    "summary": "GraphQL-Markdown + DocFX demo This project demonstrates how to generate GraphQL documentation with GraphQL-Markdown for a DocFX site using the modern template. Live demo: graphql-markdown.dev/demo-docfx Quick start npm install npm run dev Open http://localhost:8080/ and browse the GraphQL API section in the left navigation. Prerequisites Node.js 20 or later .NET SDK 8 or later DocFX installed as a global .NET tool: dotnet tool install -g docfx Commands Command Action npm install Install dependencies npm run generate Generate docs from the GraphQL schema npm run dev Generate docs + serve a local DocFX preview npm run build Generate docs + build a static site to _site/ npm run clean Remove generated files and build output Project structure . ├── content/ │ └── index.md # Homepage source for the GraphQL API section ├── docs/ │ ├── graphql/ # Generated GraphQL documentation │ │ ├── index.md # GraphQL API overview (copied from content/index.md) │ │ ├── toc.yml # Generated navigation │ │ ├── operations/ # Queries, mutations, subscriptions │ │ └── types/ # Objects, scalars, directives │ ├── introduction.md │ ├── getting-started.md │ └── toc.yml ├── schema.graphql # Sample GraphQL schema ├── scripts/ │ ├── custom-docfx-mdx.mjs # Custom MDX formatter (badge color overrides) │ └── generate-docs.mjs # GraphQL-Markdown runner ├── docfx.json # DocFX site configuration ├── index.md # Site root (redirects to introduction) ├── toc.yml # Top-level navigation └── package.json Notes The preset @graphql-markdown/formatters/docfx provides: DocFX alert syntax (> [!NOTE], > [!WARNING], etc.) for admonitions Bootstrap 5 badge classes (badge text-bg-{variant}) for type badges Path-derived uid front matter for unique DocFX cross-reference targets (e.g. operations-queries-continent) afterRenderTypeEntitiesHook that builds toc.yml navigation files at every directory level automatically Badge colors can be customized in scripts/custom-docfx-mdx.mjs by spreading BADGE_CLASS_MAP and overriding individual entries. toc.yml files in docs/graphql/ are generated at doc-generation time and should not be edited manually."
+  },
+  "docs/getting-started.html": {
+    "href": "docs/getting-started.html",
+    "title": "Getting Started | GraphQL Documentation with Docfx",
+    "summary": "Getting Started Prerequisites Node.js 20 or later .NET SDK 8 or later DocFX installed as a global .NET tool: dotnet tool install -g docfx Install dependencies npm install Generate the GraphQL docs npm run generate This runs graphql-markdown against schema.graphql and writes Markdown pages to docs/graphql/. It also builds the DocFX toc.yml navigation files for each section via the custom formatter hook. Serve locally npm run dev This generates the docs then starts a DocFX local server at http://localhost:8080. Build static site npm run build The built site is written to _site/."
+  },
+  "docs/graphql/index.html": {
+    "href": "docs/graphql/index.html",
+    "title": "GraphQL API Reference | GraphQL Documentation with Docfx",
+    "summary": "GraphQL API Reference This section contains the auto-generated API reference for the Countries GraphQL schema, produced by graphql-markdown using the DocFX formatter. Schema overview The Countries API exposes the following root types: Queries — fetch continents, countries, and languages Objects — Continent, Country, Language, State Usage Browse the sections in the left navigation to explore available queries and types."
+  },
+  "docs/graphql/operations/directives/include.html": {
+    "href": "docs/graphql/operations/directives/include.html",
+    "title": "| GraphQL Documentation with Docfx",
+    "summary": "Directs the executor to include this field or fragment only when the if argument is true. directive @include( if: Boolean! ) on | FIELD | FRAGMENT_SPREAD | INLINE_FRAGMENT Arguments include.if ● Boolean! non-null scalar Included when true."
+  },
+  "docs/graphql/operations/directives/skip.html": {
+    "href": "docs/graphql/operations/directives/skip.html",
+    "title": "| GraphQL Documentation with Docfx",
+    "summary": "Directs the executor to skip this field or fragment when the if argument is true. directive @skip( if: Boolean! ) on | FIELD | FRAGMENT_SPREAD | INLINE_FRAGMENT Arguments skip.if ● Boolean! non-null scalar Skipped when true."
+  },
+  "docs/graphql/operations/queries/continent.html": {
+    "href": "docs/graphql/operations/queries/continent.html",
+    "title": "| GraphQL Documentation with Docfx",
+    "summary": "No description continent( code: ID! ): Continent Arguments continent.code ● ID! non-null scalar Type Continent object"
+  },
+  "docs/graphql/operations/queries/continents.html": {
+    "href": "docs/graphql/operations/queries/continents.html",
+    "title": "| GraphQL Documentation with Docfx",
+    "summary": "No description continents: [Continent!]! Type Continent object"
+  },
+  "docs/graphql/operations/queries/countries.html": {
+    "href": "docs/graphql/operations/queries/countries.html",
+    "title": "| GraphQL Documentation with Docfx",
+    "summary": "No description countries: [Country!]! Type Country object"
+  },
+  "docs/graphql/operations/queries/country.html": {
+    "href": "docs/graphql/operations/queries/country.html",
+    "title": "| GraphQL Documentation with Docfx",
+    "summary": "No description country( code: ID! ): Country Arguments country.code ● ID! non-null scalar Type Country object"
+  },
+  "docs/graphql/operations/queries/language.html": {
+    "href": "docs/graphql/operations/queries/language.html",
+    "title": "| GraphQL Documentation with Docfx",
+    "summary": "No description language( code: ID! ): Language Arguments language.code ● ID! non-null scalar Type Language object"
+  },
+  "docs/graphql/operations/queries/languages.html": {
+    "href": "docs/graphql/operations/queries/languages.html",
+    "title": "| GraphQL Documentation with Docfx",
+    "summary": "No description languages: [Language!]! Type Language object"
+  },
+  "docs/graphql/operations/queries/old-country-search.html": {
+    "href": "docs/graphql/operations/queries/old-country-search.html",
+    "title": "| GraphQL Documentation with Docfx",
+    "summary": "Warning DEPRECATED Use 'countries' with filters instead No description oldCountrySearch( query: String! ): [Country!]! @deprecated Arguments oldCountrySearch.query ● String! non-null scalar Type Country object"
+  },
+  "docs/graphql/types/directives/deprecated.html": {
+    "href": "docs/graphql/types/directives/deprecated.html",
+    "title": "| GraphQL Documentation with Docfx",
+    "summary": "Marks an element of a GraphQL schema as no longer supported. directive @deprecated( reason: String = \"No longer supported\" ) on | FIELD_DEFINITION | ARGUMENT_DEFINITION | INPUT_FIELD_DEFINITION | ENUM_VALUE | DIRECTIVE_DEFINITION Arguments deprecated.reason ● String scalar Explains why this element was deprecated, usually also including a suggestion for how to access supported similar data. Formatted using the Markdown syntax, as specified by CommonMark."
+  },
+  "docs/graphql/types/directives/one-of.html": {
+    "href": "docs/graphql/types/directives/one-of.html",
+    "title": "| GraphQL Documentation with Docfx",
+    "summary": "Indicates exactly one field must be supplied and this field must not be null. directive @oneOf on INPUT_OBJECT"
+  },
+  "docs/graphql/types/directives/specified-by.html": {
+    "href": "docs/graphql/types/directives/specified-by.html",
+    "title": "| GraphQL Documentation with Docfx",
+    "summary": "Exposes a URL that specifies the behavior of this scalar. directive @specifiedBy( url: String! ) on SCALAR Arguments specifiedBy.url ● String! non-null scalar The URL that specifies the behavior of this scalar."
+  },
+  "docs/graphql/types/objects/continent.html": {
+    "href": "docs/graphql/types/objects/continent.html",
+    "title": "| GraphQL Documentation with Docfx",
+    "summary": "No description type Continent { code: ID! name: String! countries: [Country!]! } Fields Continent.code ● ID! non-null scalar Continent.name ● String! non-null scalar Continent.countries ● [Country!]! non-null object Returned By continent query ● continents query Member Of Country object"
+  },
+  "docs/graphql/types/objects/country.html": {
+    "href": "docs/graphql/types/objects/country.html",
+    "title": "| GraphQL Documentation with Docfx",
+    "summary": "No description type Country { code: ID! name: String! native: String phone: String capital: String currency: String emoji: String emojiU: String continent: Continent! languages: [Language!]! states: [State!]! } Fields Country.code ● ID! non-null scalar Country.name ● String! non-null scalar Country.native ● String scalar Country.phone ● String scalar Country.capital ● String scalar Country.currency ● String scalar Country.emoji ● String scalar Country.emojiU ● String scalar Country.continent ● Continent! non-null object Country.languages ● [Language!]! non-null object Country.states ● [State!]! non-null object Returned By countries query ● country query ● oldCountrySearch query Member Of Continent object ● State object"
+  },
+  "docs/graphql/types/objects/language.html": {
+    "href": "docs/graphql/types/objects/language.html",
+    "title": "| GraphQL Documentation with Docfx",
+    "summary": "No description type Language { code: ID! name: String! native: String rtl: Boolean } Fields Language.code ● ID! non-null scalar Language.name ● String! non-null scalar Language.native ● String scalar Language.rtl ● Boolean scalar Returned By language query ● languages query Member Of Country object"
+  },
+  "docs/graphql/types/objects/state.html": {
+    "href": "docs/graphql/types/objects/state.html",
+    "title": "| GraphQL Documentation with Docfx",
+    "summary": "No description type State { code: String name: String! country: Country! } Fields State.code ● String scalar State.name ● String! non-null scalar State.country ● Country! non-null object Member Of Country object"
+  },
+  "docs/graphql/types/scalars/boolean.html": {
+    "href": "docs/graphql/types/scalars/boolean.html",
+    "title": "| GraphQL Documentation with Docfx",
+    "summary": "The Boolean scalar type represents true or false. scalar Boolean Member Of include directive ● Language object ● skip directive"
+  },
+  "docs/graphql/types/scalars/id.html": {
+    "href": "docs/graphql/types/scalars/id.html",
+    "title": "| GraphQL Documentation with Docfx",
+    "summary": "The ID scalar type represents a unique identifier, often used to refetch an object or as key for a cache. The ID type appears in a JSON response as a String; however, it is not intended to be human-readable. When expected as an input type, any string (such as \"4\") or integer (such as 4) input value will be accepted as an ID. scalar ID Member Of continent query ● Continent object ● country query ● Country object ● language query ● Language object"
+  },
+  "docs/graphql/types/scalars/string.html": {
+    "href": "docs/graphql/types/scalars/string.html",
+    "title": "| GraphQL Documentation with Docfx",
+    "summary": "The String scalar type represents textual data, represented as UTF-8 character sequences. The String type is most often used by GraphQL to represent free-form human-readable text. scalar String Member Of Continent object ● Country object ● deprecated directive ● Language object ● oldCountrySearch query ● specifiedBy directive ● State object"
+  },
+  "docs/introduction.html": {
+    "href": "docs/introduction.html",
+    "title": "Introduction | GraphQL Documentation with Docfx",
+    "summary": "Introduction This demo shows how to use graphql-markdown with the DocFX formatter to generate API reference documentation from a GraphQL schema. How it works graphql-markdown introspects a GraphQL schema and generates Markdown pages for every query, mutation, type, input, enum, scalar, and directive. The DocFX formatter (@graphql-markdown/formatters/docfx) adapts the output for DocFX: Injects a uid field in YAML front matter for cross-reference resolution Uses DocFX alert syntax (> [!NOTE], > [!WARNING], etc.) for admonitions Renders badges as inline <mark> elements Schema The demo uses the Countries API schema — a simple public GraphQL API exposing continents, countries, and languages. Source See Getting Started to run the demo locally."
+  },
+  "index.html": {
+    "href": "index.html",
+    "title": "",
+    "summary": ""
+  }
+}

@@ -1,0 +1,389 @@
+{
+  "source_base_path": "/home/runner/work/demo-docfx/demo-docfx",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      }
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "README.md",
+      "output": {
+        ".html": {
+          "relative_path": "README.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/getting-started.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/getting-started.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/graphql/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/graphql/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/graphql/operations/directives/include.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/graphql/operations/directives/include.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/graphql/operations/directives/skip.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/graphql/operations/directives/skip.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "docs/graphql/operations/directives/toc.yml",
+      "output": {
+        ".json": {
+          "relative_path": "docs/graphql/operations/directives/toc.json"
+        },
+        ".html": {
+          "relative_path": "docs/graphql/operations/directives/toc.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/graphql/operations/queries/continent.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/graphql/operations/queries/continent.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/graphql/operations/queries/continents.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/graphql/operations/queries/continents.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/graphql/operations/queries/countries.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/graphql/operations/queries/countries.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/graphql/operations/queries/country.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/graphql/operations/queries/country.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/graphql/operations/queries/language.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/graphql/operations/queries/language.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/graphql/operations/queries/languages.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/graphql/operations/queries/languages.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/graphql/operations/queries/old-country-search.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/graphql/operations/queries/old-country-search.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "docs/graphql/operations/queries/toc.yml",
+      "output": {
+        ".json": {
+          "relative_path": "docs/graphql/operations/queries/toc.json"
+        },
+        ".html": {
+          "relative_path": "docs/graphql/operations/queries/toc.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "docs/graphql/operations/toc.yml",
+      "output": {
+        ".json": {
+          "relative_path": "docs/graphql/operations/toc.json"
+        },
+        ".html": {
+          "relative_path": "docs/graphql/operations/toc.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "docs/graphql/toc.yml",
+      "output": {
+        ".json": {
+          "relative_path": "docs/graphql/toc.json"
+        },
+        ".html": {
+          "relative_path": "docs/graphql/toc.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/graphql/types/directives/deprecated.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/graphql/types/directives/deprecated.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/graphql/types/directives/one-of.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/graphql/types/directives/one-of.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/graphql/types/directives/specified-by.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/graphql/types/directives/specified-by.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "docs/graphql/types/directives/toc.yml",
+      "output": {
+        ".json": {
+          "relative_path": "docs/graphql/types/directives/toc.json"
+        },
+        ".html": {
+          "relative_path": "docs/graphql/types/directives/toc.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/graphql/types/objects/continent.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/graphql/types/objects/continent.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/graphql/types/objects/country.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/graphql/types/objects/country.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/graphql/types/objects/language.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/graphql/types/objects/language.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/graphql/types/objects/state.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/graphql/types/objects/state.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "docs/graphql/types/objects/toc.yml",
+      "output": {
+        ".json": {
+          "relative_path": "docs/graphql/types/objects/toc.json"
+        },
+        ".html": {
+          "relative_path": "docs/graphql/types/objects/toc.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/graphql/types/scalars/boolean.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/graphql/types/scalars/boolean.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/graphql/types/scalars/id.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/graphql/types/scalars/id.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/graphql/types/scalars/string.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/graphql/types/scalars/string.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "docs/graphql/types/scalars/toc.yml",
+      "output": {
+        ".json": {
+          "relative_path": "docs/graphql/types/scalars/toc.json"
+        },
+        ".html": {
+          "relative_path": "docs/graphql/types/scalars/toc.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "docs/graphql/types/toc.yml",
+      "output": {
+        ".json": {
+          "relative_path": "docs/graphql/types/toc.json"
+        },
+        ".html": {
+          "relative_path": "docs/graphql/types/toc.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/introduction.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/introduction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "docs/toc.yml",
+      "output": {
+        ".json": {
+          "relative_path": "docs/toc.json"
+        },
+        ".html": {
+          "relative_path": "docs/toc.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Redirection",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".json": {
+          "relative_path": "toc.json"
+        },
+        ".html": {
+          "relative_path": "toc.html"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
