@@ -12,7 +12,7 @@
   "dependencies": {
     "@graphql-markdown/cli": "^1.2.0",
     "@graphql-markdown/formatters": "^1.2.0",
-    "@graphql-tools/graphql-file-loader": "^8.1.20",
+    "@graphql-tools/graphql-file-loader": "^8.1.22",
     "graphql": "^17.0.2"
   }
 }
