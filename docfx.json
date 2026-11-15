@@ -28,6 +28,7 @@
     "globalMetadata": {
       "_appName": "GraphQL-Markdown",
       "_appTitle": "GraphQL Documentation with Docfx",
+      "_appFooter": "Generated with <a href=\"https://graphql-markdown.dev\">GraphQL-Markdown</a> · <a href=\"https://github.com/graphql-markdown/graphql-markdown\">⭐ Star on GitHub</a>",
       "_enableSearch": true,
       "pdf": false
     }
