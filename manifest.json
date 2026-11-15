@@ -65,11 +65,11 @@
       "type": "Toc",
       "source_relative_path": "docs/graphql/operations/directives/toc.yml",
       "output": {
-        ".html": {
-          "relative_path": "docs/graphql/operations/directives/toc.html"
-        },
         ".json": {
           "relative_path": "docs/graphql/operations/directives/toc.json"
+        },
+        ".html": {
+          "relative_path": "docs/graphql/operations/directives/toc.html"
         }
       },
       "version": ""
@@ -148,11 +148,11 @@
       "type": "Toc",
       "source_relative_path": "docs/graphql/operations/queries/toc.yml",
       "output": {
-        ".html": {
-          "relative_path": "docs/graphql/operations/queries/toc.html"
-        },
         ".json": {
           "relative_path": "docs/graphql/operations/queries/toc.json"
+        },
+        ".html": {
+          "relative_path": "docs/graphql/operations/queries/toc.html"
         }
       },
       "version": ""
@@ -161,11 +161,11 @@
       "type": "Toc",
       "source_relative_path": "docs/graphql/operations/toc.yml",
       "output": {
-        ".html": {
-          "relative_path": "docs/graphql/operations/toc.html"
-        },
         ".json": {
           "relative_path": "docs/graphql/operations/toc.json"
+        },
+        ".html": {
+          "relative_path": "docs/graphql/operations/toc.html"
         }
       },
       "version": ""
@@ -174,11 +174,11 @@
       "type": "Toc",
       "source_relative_path": "docs/graphql/toc.yml",
       "output": {
-        ".html": {
-          "relative_path": "docs/graphql/toc.html"
-        },
         ".json": {
           "relative_path": "docs/graphql/toc.json"
+        },
+        ".html": {
+          "relative_path": "docs/graphql/toc.html"
         }
       },
       "version": ""
@@ -217,11 +217,11 @@
       "type": "Toc",
       "source_relative_path": "docs/graphql/types/directives/toc.yml",
       "output": {
-        ".html": {
-          "relative_path": "docs/graphql/types/directives/toc.html"
-        },
         ".json": {
           "relative_path": "docs/graphql/types/directives/toc.json"
+        },
+        ".html": {
+          "relative_path": "docs/graphql/types/directives/toc.html"
         }
       },
       "version": ""
@@ -270,11 +270,11 @@
       "type": "Toc",
       "source_relative_path": "docs/graphql/types/objects/toc.yml",
       "output": {
-        ".html": {
-          "relative_path": "docs/graphql/types/objects/toc.html"
-        },
         ".json": {
           "relative_path": "docs/graphql/types/objects/toc.json"
+        },
+        ".html": {
+          "relative_path": "docs/graphql/types/objects/toc.html"
         }
       },
       "version": ""
@@ -313,11 +313,11 @@
       "type": "Toc",
       "source_relative_path": "docs/graphql/types/scalars/toc.yml",
       "output": {
-        ".html": {
-          "relative_path": "docs/graphql/types/scalars/toc.html"
-        },
         ".json": {
           "relative_path": "docs/graphql/types/scalars/toc.json"
+        },
+        ".html": {
+          "relative_path": "docs/graphql/types/scalars/toc.html"
         }
       },
       "version": ""
@@ -326,11 +326,11 @@
       "type": "Toc",
       "source_relative_path": "docs/graphql/types/toc.yml",
       "output": {
-        ".html": {
-          "relative_path": "docs/graphql/types/toc.html"
-        },
         ".json": {
           "relative_path": "docs/graphql/types/toc.json"
+        },
+        ".html": {
+          "relative_path": "docs/graphql/types/toc.html"
         }
       },
       "version": ""
@@ -349,11 +349,11 @@
       "type": "Toc",
       "source_relative_path": "docs/toc.yml",
       "output": {
-        ".html": {
-          "relative_path": "docs/toc.html"
-        },
         ".json": {
           "relative_path": "docs/toc.json"
+        },
+        ".html": {
+          "relative_path": "docs/toc.html"
         }
       },
       "version": ""
@@ -372,11 +372,11 @@
       "type": "Toc",
       "source_relative_path": "toc.yml",
       "output": {
-        ".html": {
-          "relative_path": "toc.html"
-        },
         ".json": {
           "relative_path": "toc.json"
+        },
+        ".html": {
+          "relative_path": "toc.html"
         }
       },
       "version": ""
