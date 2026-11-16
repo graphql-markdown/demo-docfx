@@ -16,97 +16,97 @@
   },
   "docs/graphql/operations/directives/include.html": {
     "href": "docs/graphql/operations/directives/include.html",
-    "title": "| GraphQL Documentation with Docfx",
+    "title": "include | GraphQL Documentation with Docfx",
     "summary": "Directs the executor to include this field or fragment only when the if argument is true. directive @include( if: Boolean! ) on | FIELD | FRAGMENT_SPREAD | INLINE_FRAGMENT Arguments include.if ● Boolean! non-null scalar Included when true."
   },
   "docs/graphql/operations/directives/skip.html": {
     "href": "docs/graphql/operations/directives/skip.html",
-    "title": "| GraphQL Documentation with Docfx",
+    "title": "skip | GraphQL Documentation with Docfx",
     "summary": "Directs the executor to skip this field or fragment when the if argument is true. directive @skip( if: Boolean! ) on | FIELD | FRAGMENT_SPREAD | INLINE_FRAGMENT Arguments skip.if ● Boolean! non-null scalar Skipped when true."
   },
   "docs/graphql/operations/queries/continent.html": {
     "href": "docs/graphql/operations/queries/continent.html",
-    "title": "| GraphQL Documentation with Docfx",
+    "title": "continent | GraphQL Documentation with Docfx",
     "summary": "No description continent( code: ID! ): Continent Arguments continent.code ● ID! non-null scalar Type Continent object"
   },
   "docs/graphql/operations/queries/continents.html": {
     "href": "docs/graphql/operations/queries/continents.html",
-    "title": "| GraphQL Documentation with Docfx",
+    "title": "continents | GraphQL Documentation with Docfx",
     "summary": "No description continents: [Continent!]! Type Continent object"
   },
   "docs/graphql/operations/queries/countries.html": {
     "href": "docs/graphql/operations/queries/countries.html",
-    "title": "| GraphQL Documentation with Docfx",
+    "title": "countries | GraphQL Documentation with Docfx",
     "summary": "No description countries: [Country!]! Type Country object"
   },
   "docs/graphql/operations/queries/country.html": {
     "href": "docs/graphql/operations/queries/country.html",
-    "title": "| GraphQL Documentation with Docfx",
+    "title": "country | GraphQL Documentation with Docfx",
     "summary": "No description country( code: ID! ): Country Arguments country.code ● ID! non-null scalar Type Country object"
   },
   "docs/graphql/operations/queries/language.html": {
     "href": "docs/graphql/operations/queries/language.html",
-    "title": "| GraphQL Documentation with Docfx",
+    "title": "language | GraphQL Documentation with Docfx",
     "summary": "No description language( code: ID! ): Language Arguments language.code ● ID! non-null scalar Type Language object"
   },
   "docs/graphql/operations/queries/languages.html": {
     "href": "docs/graphql/operations/queries/languages.html",
-    "title": "| GraphQL Documentation with Docfx",
+    "title": "languages | GraphQL Documentation with Docfx",
     "summary": "No description languages: [Language!]! Type Language object"
   },
   "docs/graphql/operations/queries/old-country-search.html": {
     "href": "docs/graphql/operations/queries/old-country-search.html",
-    "title": "| GraphQL Documentation with Docfx",
+    "title": "oldCountrySearch | GraphQL Documentation with Docfx",
     "summary": "Warning DEPRECATED Use 'countries' with filters instead No description oldCountrySearch( query: String! ): [Country!]! @deprecated Arguments oldCountrySearch.query ● String! non-null scalar Type Country object"
   },
   "docs/graphql/types/directives/deprecated.html": {
     "href": "docs/graphql/types/directives/deprecated.html",
-    "title": "| GraphQL Documentation with Docfx",
+    "title": "deprecated | GraphQL Documentation with Docfx",
     "summary": "Marks an element of a GraphQL schema as no longer supported. directive @deprecated( reason: String! ) on | FIELD_DEFINITION | ARGUMENT_DEFINITION | INPUT_FIELD_DEFINITION | ENUM_VALUE | DIRECTIVE_DEFINITION Arguments deprecated.reason ● String! non-null scalar Explains why this element was deprecated, usually also including a suggestion for how to access supported similar data. Formatted using the Markdown syntax, as specified by CommonMark."
   },
   "docs/graphql/types/directives/one-of.html": {
     "href": "docs/graphql/types/directives/one-of.html",
-    "title": "| GraphQL Documentation with Docfx",
+    "title": "oneOf | GraphQL Documentation with Docfx",
     "summary": "Indicates exactly one field must be supplied and this field must not be null. directive @oneOf on INPUT_OBJECT"
   },
   "docs/graphql/types/directives/specified-by.html": {
     "href": "docs/graphql/types/directives/specified-by.html",
-    "title": "| GraphQL Documentation with Docfx",
+    "title": "specifiedBy | GraphQL Documentation with Docfx",
     "summary": "Exposes a URL that specifies the behavior of this scalar. directive @specifiedBy( url: String! ) on SCALAR Arguments specifiedBy.url ● String! non-null scalar The URL that specifies the behavior of this scalar."
   },
   "docs/graphql/types/objects/continent.html": {
     "href": "docs/graphql/types/objects/continent.html",
-    "title": "| GraphQL Documentation with Docfx",
+    "title": "Continent | GraphQL Documentation with Docfx",
     "summary": "No description type Continent { code: ID! name: String! countries: [Country!]! } Fields Continent.code ● ID! non-null scalar Continent.name ● String! non-null scalar Continent.countries ● [Country!]! non-null object Returned By continent query ● continents query Member Of Country object"
   },
   "docs/graphql/types/objects/country.html": {
     "href": "docs/graphql/types/objects/country.html",
-    "title": "| GraphQL Documentation with Docfx",
+    "title": "Country | GraphQL Documentation with Docfx",
     "summary": "No description type Country { code: ID! name: String! native: String phone: String capital: String currency: String emoji: String emojiU: String continent: Continent! languages: [Language!]! states: [State!]! } Fields Country.code ● ID! non-null scalar Country.name ● String! non-null scalar Country.native ● String scalar Country.phone ● String scalar Country.capital ● String scalar Country.currency ● String scalar Country.emoji ● String scalar Country.emojiU ● String scalar Country.continent ● Continent! non-null object Country.languages ● [Language!]! non-null object Country.states ● [State!]! non-null object Returned By countries query ● country query ● oldCountrySearch query Member Of Continent object ● State object"
   },
   "docs/graphql/types/objects/language.html": {
     "href": "docs/graphql/types/objects/language.html",
-    "title": "| GraphQL Documentation with Docfx",
+    "title": "Language | GraphQL Documentation with Docfx",
     "summary": "No description type Language { code: ID! name: String! native: String rtl: Boolean } Fields Language.code ● ID! non-null scalar Language.name ● String! non-null scalar Language.native ● String scalar Language.rtl ● Boolean scalar Returned By language query ● languages query Member Of Country object"
   },
   "docs/graphql/types/objects/state.html": {
     "href": "docs/graphql/types/objects/state.html",
-    "title": "| GraphQL Documentation with Docfx",
+    "title": "State | GraphQL Documentation with Docfx",
     "summary": "No description type State { code: String name: String! country: Country! } Fields State.code ● String scalar State.name ● String! non-null scalar State.country ● Country! non-null object Member Of Country object"
   },
   "docs/graphql/types/scalars/boolean.html": {
     "href": "docs/graphql/types/scalars/boolean.html",
-    "title": "| GraphQL Documentation with Docfx",
+    "title": "Boolean | GraphQL Documentation with Docfx",
     "summary": "The Boolean scalar type represents true or false. scalar Boolean Member Of include directive ● Language object ● skip directive"
   },
   "docs/graphql/types/scalars/id.html": {
     "href": "docs/graphql/types/scalars/id.html",
-    "title": "| GraphQL Documentation with Docfx",
+    "title": "ID | GraphQL Documentation with Docfx",
     "summary": "The ID scalar type represents a unique identifier, often used to refetch an object or as key for a cache. The ID type appears in a JSON response as a String; however, it is not intended to be human-readable. When expected as an input type, any string (such as \"4\") or integer (such as 4) input value will be accepted as an ID. scalar ID Member Of continent query ● Continent object ● country query ● Country object ● language query ● Language object"
   },
   "docs/graphql/types/scalars/string.html": {
     "href": "docs/graphql/types/scalars/string.html",
-    "title": "| GraphQL Documentation with Docfx",
+    "title": "String | GraphQL Documentation with Docfx",
     "summary": "The String scalar type represents textual data, represented as UTF-8 character sequences. The String type is most often used by GraphQL to represent free-form human-readable text. scalar String Member Of Continent object ● Country object ● deprecated directive ● Language object ● oldCountrySearch query ● specifiedBy directive ● State object"
   },
   "docs/introduction.html": {
