@@ -50,8 +50,11 @@ dotnet tool install -g docfx
 │   └── toc.yml
 ├── schema.graphql                  # Sample GraphQL schema
 ├── scripts/
-│   ├── custom-docfx-mdx.mjs        # Custom MDX formatter (badge color overrides)
+│   ├── custom-docfx-mdx.mjs        # Custom MDX formatter (badge colors, page H1 title)
 │   └── generate-docs.mjs           # GraphQL-Markdown runner
+├── template/public/                # DocFX modern template overrides
+│   ├── main.css                    # Styles for generated GraphQL pages (light/dark)
+│   └── main.js                     # Points field names at their heading anchors
 ├── docfx.json                      # DocFX site configuration
 ├── index.md                        # Site root (redirects to introduction)
 ├── toc.yml                         # Top-level navigation
@@ -66,4 +69,5 @@ dotnet tool install -g docfx
   - Path-derived `uid` front matter for unique DocFX cross-reference targets (e.g. `operations-queries-continent`)
   - `afterRenderTypeEntitiesHook` that builds `toc.yml` navigation files at every directory level automatically
 - Badge colors can be customized in `scripts/custom-docfx-mdx.mjs` by spreading `BADGE_CLASS_MAP` and overriding individual entries.
+- `template/public/main.css` restyles the formatter output (entity chips, pill badges, field rows, code blocks, alerts) using Bootstrap theme variables, so it follows DocFX's light/dark switch.
 - `toc.yml` files in `docs/graphql/` are generated at doc-generation time and should not be edited manually.

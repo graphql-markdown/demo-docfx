@@ -8,7 +8,7 @@ This demo shows how to use [graphql-markdown](https://graphql-markdown.github.io
 
 - Injects a `uid` field in YAML front matter for cross-reference resolution
 - Uses DocFX alert syntax (`> [!NOTE]`, `> [!WARNING]`, etc.) for admonitions
-- Renders badges as inline `<mark>` elements
+- Renders badges as Bootstrap `<span class="badge">` elements, styled as pills by the demo template
 
 ## Schema
 
