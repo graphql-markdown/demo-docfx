@@ -22,7 +22,7 @@ npm install
 npm run generate
 ```
 
-This runs `graphql-markdown` against `schema.graphql` and writes Markdown pages to `docs/graphql/`. It also builds the DocFX `toc.yml` navigation files for each section via the custom formatter hook.
+This runs `graphql-markdown` against the [shared demo schema](https://github.com/graphql-markdown/graphql-markdown/blob/main/tests/e2e/__data__/demo_schema.graphql) (loaded from its URL) and writes Markdown pages to `docs/graphql/`. It also builds the DocFX `toc.yml` navigation files for each section via the custom formatter hook.
 
 ## Serve locally
 

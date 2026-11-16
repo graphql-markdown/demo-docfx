@@ -48,7 +48,6 @@ dotnet tool install -g docfx
 │   ├── introduction.md
 │   ├── getting-started.md
 │   └── toc.yml
-├── schema.graphql                  # Sample GraphQL schema
 ├── scripts/
 │   ├── custom-docfx-mdx.mjs        # Custom MDX formatter (badge colors, page H1 title)
 │   └── generate-docs.mjs           # GraphQL-Markdown runner
@@ -63,10 +62,11 @@ dotnet tool install -g docfx
 
 ## Notes
 
+- The documented schema is the [shared GraphQL-Markdown demo schema](https://github.com/graphql-markdown/graphql-markdown/blob/main/tests/e2e/__data__/demo_schema.graphql) used by all GraphQL-Markdown demos, loaded from its raw URL at generation time.
 - The preset `@graphql-markdown/formatters/docfx` provides:
   - DocFX alert syntax (`> [!NOTE]`, `> [!WARNING]`, etc.) for admonitions
   - Bootstrap 5 badge classes (`badge text-bg-{variant}`) for type badges
-  - Path-derived `uid` front matter for unique DocFX cross-reference targets (e.g. `operations-queries-continent`)
+  - Path-derived `uid` front matter for unique DocFX cross-reference targets (e.g. `operations-queries-projects`)
   - `afterRenderTypeEntitiesHook` that builds `toc.yml` navigation files at every directory level automatically
 - Badge colors can be customized in `scripts/custom-docfx-mdx.mjs` by spreading `BADGE_CLASS_MAP` and overriding individual entries.
 - `template/public/main.css` restyles the formatter output (entity chips, pill badges, field rows, code blocks, alerts) using Bootstrap theme variables, so it follows DocFX's light/dark switch.

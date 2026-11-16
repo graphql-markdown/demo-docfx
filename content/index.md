@@ -1,13 +1,15 @@
 # GraphQL API Reference
 
-This section contains the auto-generated API reference for the Countries GraphQL schema, produced by [graphql-markdown](https://graphql-markdown.github.io) using the DocFX formatter.
+This section contains the auto-generated API reference for the [shared GraphQL-Markdown demo schema](https://github.com/graphql-markdown/graphql-markdown/blob/main/tests/e2e/__data__/demo_schema.graphql), produced by [graphql-markdown](https://graphql-markdown.github.io) using the DocFX formatter.
 
 ## Schema overview
 
-The Countries API exposes the following root types:
+The demo API models a small project workspace:
 
-- **Queries** — fetch continents, countries, and languages
-- **Objects** — `Continent`, `Country`, `Language`, `State`
+- **Queries** — list folders and projects, and search across them
+- **Mutations** — create folders and projects, archive projects
+- **Subscriptions** — follow project changes and new folders
+- **Types** — `Folder`, `Project`, `User` (all implementing `Node`), the `SearchResult` union, enums, inputs and custom directives
 
 ## Usage
 
