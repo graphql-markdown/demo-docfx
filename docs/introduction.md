@@ -12,7 +12,7 @@ This demo shows how to use [graphql-markdown](https://graphql-markdown.github.io
 
 ## Schema
 
-The demo uses the [Countries API](https://github.com/trevorblades/countries) schema — a simple public GraphQL API exposing continents, countries, and languages.
+The demo uses the [shared GraphQL-Markdown demo schema](https://github.com/graphql-markdown/graphql-markdown/blob/main/tests/e2e/__data__/demo_schema.graphql), the same small project-workspace API documented by every GraphQL-Markdown demo. It is loaded from its raw URL at generation time.
 
 ## Source
 
