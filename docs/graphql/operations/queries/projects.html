@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>language | GraphQL Documentation with Docfx </title>
+      <title>projects | GraphQL Documentation with Docfx </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="language | GraphQL Documentation with Docfx ">
+      <meta name="title" content="projects | GraphQL Documentation with Docfx ">
       
       
       <link rel="icon" href="../../../../favicon.ico">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../../../../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/graphql-markdown/demo-docfx/blob/main/docs/graphql/operations/queries/language.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/graphql-markdown/demo-docfx/blob/main/docs/graphql/operations/queries/projects.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -84,23 +84,43 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="operations-queries-language">
+        <article data-uid="operations-queries-projects">
+<h1 id="projects">projects</h1>
 
-
-<p>No description</p>
-<pre><code class="lang-graphql">language(
-  code: ID!
-): Language
+<p>List projects, optionally filtered by lifecycle status.</p>
+<pre><code class="lang-graphql">projects(
+  status: ProjectStatus
+  limit: Int
+): ProjectConnection!
 </code></pre>
 <h3 id="arguments">Arguments</h3>
-<h4 id="languagecodeid-non-null-scalar"><a href="#"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-parent">language</code>.<code class="gqlmd-mdx-entity-name">code</code></span></a><span class="gqlmd-mdx-bullet"> ● </span><a href="../../types/scalars/id.html"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-name">ID!</code></span></a> <span class="badge text-bg-primary">non-null</span> <span class="badge text-bg-secondary">scalar</span></h4>
+<h4 id="projectsstatusprojectstatus-enum"><a href="#"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-parent">projects</code>.<code class="gqlmd-mdx-entity-name">status</code></span></a><span class="gqlmd-mdx-bullet"> ● </span><a href="../../types/enums/project-status.html"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-name">ProjectStatus</code></span></a> <span class="badge text-bg-secondary">enum</span></h4>
+<p>Limit results to projects in this lifecycle stage.</p>
+<h4 id="projectslimitint-scalar"><a href="#"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-parent">projects</code>.<code class="gqlmd-mdx-entity-name">limit</code></span></a><span class="gqlmd-mdx-bullet"> ● </span><a href="../../types/scalars/int.html"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-name">Int</code></span></a> <span class="badge text-bg-secondary">scalar</span></h4>
+<p>Maximum number of projects to return. Defaults to 20.</p>
 <h3 id="type">Type</h3>
-<h4 id="language-object"><a href="../../types/objects/language.html"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-name">Language</code></span></a> <span class="badge text-bg-secondary">object</span></h4>
+<h4 id="projectconnection-object"><a href="../../types/objects/project-connection.html"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-name">ProjectConnection</code></span></a> <span class="badge text-bg-secondary">object</span></h4>
+<p>A paginated project result set.</p>
+<h3 id="example">Example</h3>
+<pre><code class="lang-graphql">query ListActiveProjects($status: ProjectStatus) {
+  projects(status: $status) {
+    totalCount
+    nodes {
+      id
+      name
+      status
+      owner {
+        name
+      }
+    }
+  }
+}
+</code></pre>
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/graphql-markdown/demo-docfx/blob/main/docs/graphql/operations/queries/language.md/#L1" class="edit-link">Edit this page</a>
+          <a href="https://github.com/graphql-markdown/demo-docfx/blob/main/docs/graphql/operations/queries/projects.md/#L1" class="edit-link">Edit this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>
@@ -117,7 +137,7 @@
     <footer class="border-top text-secondary">
       <div class="container-xxl">
         <div class="flex-fill">
-          Generated with <a href="https://graphql-markdown.dev">GraphQL-Markdown</a> · <a href="https://github.com/graphql-markdown/graphql-markdown">⭐ Star on GitHub</a>
+          <div class="text-center">Generated with <a href="https://graphql-markdown.dev">GraphQL-Markdown</a> · <a href="https://github.com/graphql-markdown/graphql-markdown">⭐ Star on GitHub</a></div>
         </div>
       </div>
     </footer>

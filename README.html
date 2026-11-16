@@ -132,10 +132,12 @@ npm run dev
 │   ├── introduction.md
 │   ├── getting-started.md
 │   └── toc.yml
-├── schema.graphql                  # Sample GraphQL schema
 ├── scripts/
-│   ├── custom-docfx-mdx.mjs        # Custom MDX formatter (badge color overrides)
+│   ├── custom-docfx-mdx.mjs        # Custom MDX formatter (badge colors, page H1 title)
 │   └── generate-docs.mjs           # GraphQL-Markdown runner
+├── template/public/                # DocFX modern template overrides
+│   ├── main.css                    # Styles for generated GraphQL pages (light/dark)
+│   └── main.js                     # Points field names at their heading anchors
 ├── docfx.json                      # DocFX site configuration
 ├── index.md                        # Site root (redirects to introduction)
 ├── toc.yml                         # Top-level navigation
@@ -143,15 +145,17 @@ npm run dev
 </code></pre>
 <h2 id="notes">Notes</h2>
 <ul>
+<li>The documented schema is the <a href="https://github.com/graphql-markdown/graphql-markdown/blob/main/tests/e2e/__data__/demo_schema.graphql">shared GraphQL-Markdown demo schema</a> used by all GraphQL-Markdown demos, loaded from its raw URL at generation time.</li>
 <li>The preset <code>@graphql-markdown/formatters/docfx</code> provides:
 <ul>
 <li>DocFX alert syntax (<code>&gt; [!NOTE]</code>, <code>&gt; [!WARNING]</code>, etc.) for admonitions</li>
 <li>Bootstrap 5 badge classes (<code>badge text-bg-{variant}</code>) for type badges</li>
-<li>Path-derived <code>uid</code> front matter for unique DocFX cross-reference targets (e.g. <code>operations-queries-continent</code>)</li>
+<li>Path-derived <code>uid</code> front matter for unique DocFX cross-reference targets (e.g. <code>operations-queries-projects</code>)</li>
 <li><code>afterRenderTypeEntitiesHook</code> that builds <code>toc.yml</code> navigation files at every directory level automatically</li>
 </ul>
 </li>
 <li>Badge colors can be customized in <code>scripts/custom-docfx-mdx.mjs</code> by spreading <code>BADGE_CLASS_MAP</code> and overriding individual entries.</li>
+<li><code>template/public/main.css</code> restyles the formatter output (entity chips, pill badges, field rows, code blocks, alerts) using Bootstrap theme variables, so it follows DocFX's light/dark switch.</li>
 <li><code>toc.yml</code> files in <code>docs/graphql/</code> are generated at doc-generation time and should not be edited manually.</li>
 </ul>
 
@@ -175,7 +179,7 @@ npm run dev
     <footer class="border-top text-secondary">
       <div class="container-xxl">
         <div class="flex-fill">
-          Generated with <a href="https://graphql-markdown.dev">GraphQL-Markdown</a> · <a href="https://github.com/graphql-markdown/graphql-markdown">⭐ Star on GitHub</a>
+          <div class="text-center">Generated with <a href="https://graphql-markdown.dev">GraphQL-Markdown</a> · <a href="https://github.com/graphql-markdown/graphql-markdown">⭐ Star on GitHub</a></div>
         </div>
       </div>
     </footer>

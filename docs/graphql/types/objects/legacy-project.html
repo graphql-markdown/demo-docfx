@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>countries | GraphQL Documentation with Docfx </title>
+      <title>LegacyProject | GraphQL Documentation with Docfx </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="countries | GraphQL Documentation with Docfx ">
+      <meta name="title" content="LegacyProject | GraphQL Documentation with Docfx ">
       
       
       <link rel="icon" href="../../../../favicon.ico">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../../../../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/graphql-markdown/demo-docfx/blob/main/docs/graphql/operations/queries/countries.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/graphql-markdown/demo-docfx/blob/main/docs/graphql/types/objects/legacy-project.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -84,19 +84,28 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="operations-queries-countries">
+        <article data-uid="types-objects-legacy-project">
+<h1 id="legacyproject">LegacyProject</h1>
 
-
-<p>No description</p>
-<pre><code class="lang-graphql">countries: [Country!]!
+<p>Use Project instead for active workspace work.</p>
+<pre><code class="lang-graphql">type LegacyProject {
+  id: ID!
+  name: String!
+}
 </code></pre>
-<h3 id="type">Type</h3>
-<h4 id="country-object"><a href="../../types/objects/country.html"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-name">Country</code></span></a> <span class="badge text-bg-secondary">object</span></h4>
+<h3 id="fields">Fields</h3>
+<h4 id="legacyprojectidid-non-null-scalar"><a href="#"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-parent">LegacyProject</code>.<code class="gqlmd-mdx-entity-name">id</code></span></a><span class="gqlmd-mdx-bullet"> ● </span><a href="../scalars/id.html"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-name">ID!</code></span></a> <span class="badge text-bg-primary">non-null</span> <span class="badge text-bg-secondary">scalar</span></h4>
+<p>The unique identifier of the legacy project.</p>
+<h4 id="legacyprojectnamestring-non-null-scalar"><a href="#"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-parent">LegacyProject</code>.<code class="gqlmd-mdx-entity-name">name</code></span></a><span class="gqlmd-mdx-bullet"> ● </span><a href="../scalars/string.html"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-name">String!</code></span></a> <span class="badge text-bg-primary">non-null</span> <span class="badge text-bg-secondary">scalar</span></h4>
+<p>The legacy project name.</p>
+<h3 id="example">Example</h3>
+<pre><code class="lang-graphql">{}
+</code></pre>
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/graphql-markdown/demo-docfx/blob/main/docs/graphql/operations/queries/countries.md/#L1" class="edit-link">Edit this page</a>
+          <a href="https://github.com/graphql-markdown/demo-docfx/blob/main/docs/graphql/types/objects/legacy-project.md/#L1" class="edit-link">Edit this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>
@@ -113,7 +122,7 @@
     <footer class="border-top text-secondary">
       <div class="container-xxl">
         <div class="flex-fill">
-          Generated with <a href="https://graphql-markdown.dev">GraphQL-Markdown</a> · <a href="https://github.com/graphql-markdown/graphql-markdown">⭐ Star on GitHub</a>
+          <div class="text-center">Generated with <a href="https://graphql-markdown.dev">GraphQL-Markdown</a> · <a href="https://github.com/graphql-markdown/graphql-markdown">⭐ Star on GitHub</a></div>
         </div>
       </div>
     </footer>

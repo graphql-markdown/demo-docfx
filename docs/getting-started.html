@@ -101,7 +101,7 @@
 <h2 id="generate-the-graphql-docs">Generate the GraphQL docs</h2>
 <pre><code class="lang-bash">npm run generate
 </code></pre>
-<p>This runs <code>graphql-markdown</code> against <code>schema.graphql</code> and writes Markdown pages to <code>docs/graphql/</code>. It also builds the DocFX <code>toc.yml</code> navigation files for each section via the custom formatter hook.</p>
+<p>This runs <code>graphql-markdown</code> against the <a href="https://github.com/graphql-markdown/graphql-markdown/blob/main/tests/e2e/__data__/demo_schema.graphql">shared demo schema</a> (loaded from its URL) and writes Markdown pages to <code>docs/graphql/</code>. It also builds the DocFX <code>toc.yml</code> navigation files for each section via the custom formatter hook.</p>
 <h2 id="serve-locally">Serve locally</h2>
 <pre><code class="lang-bash">npm run dev
 </code></pre>
@@ -131,7 +131,7 @@
     <footer class="border-top text-secondary">
       <div class="container-xxl">
         <div class="flex-fill">
-          Generated with <a href="https://graphql-markdown.dev">GraphQL-Markdown</a> · <a href="https://github.com/graphql-markdown/graphql-markdown">⭐ Star on GitHub</a>
+          <div class="text-center">Generated with <a href="https://graphql-markdown.dev">GraphQL-Markdown</a> · <a href="https://github.com/graphql-markdown/graphql-markdown">⭐ Star on GitHub</a></div>
         </div>
       </div>
     </footer>

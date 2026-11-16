@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>State | GraphQL Documentation with Docfx </title>
+      <title>projectChanged | GraphQL Documentation with Docfx </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="State | GraphQL Documentation with Docfx ">
+      <meta name="title" content="projectChanged | GraphQL Documentation with Docfx ">
       
       
       <link rel="icon" href="../../../../favicon.ico">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../../../../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/graphql-markdown/demo-docfx/blob/main/docs/graphql/types/objects/state.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/graphql-markdown/demo-docfx/blob/main/docs/graphql/operations/subscriptions/project-changed.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -84,27 +84,44 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="types-objects-state">
+        <article data-uid="operations-subscriptions-project-changed">
+<h1 id="projectchanged">projectChanged</h1>
 
-
-<p>No description</p>
-<pre><code class="lang-graphql">type State {
-  code: String
-  name: String!
-  country: Country!
+<p>Receive an event whenever a project changes in the workspace.</p>
+<pre><code class="lang-graphql">projectChanged(
+  projectId: ID
+  types: [ProjectEventType!]
+): ProjectEvent!
+</code></pre>
+<h3 id="arguments">Arguments</h3>
+<h4 id="projectchangedprojectidid-scalar"><a href="#"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-parent">projectChanged</code>.<code class="gqlmd-mdx-entity-name">projectId</code></span></a><span class="gqlmd-mdx-bullet"> ● </span><a href="../../types/scalars/id.html"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-name">ID</code></span></a> <span class="badge text-bg-secondary">scalar</span></h4>
+<p>Limit events to a single project.</p>
+<h4 id="projectchangedtypesprojecteventtype-list-enum"><a href="#"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-parent">projectChanged</code>.<code class="gqlmd-mdx-entity-name">types</code></span></a><span class="gqlmd-mdx-bullet"> ● </span><a href="../../types/enums/project-event-type.html"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-name">[ProjectEventType!]</code></span></a> <span class="badge text-bg-secondary">list</span> <span class="badge text-bg-secondary">enum</span></h4>
+<p>Limit events to these change kinds.</p>
+<h3 id="type">Type</h3>
+<h4 id="projectevent-object"><a href="../../types/objects/project-event.html"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-name">ProjectEvent</code></span></a> <span class="badge text-bg-secondary">object</span></h4>
+<p>A change delivered to subscribers watching a project.</p>
+<h3 id="example">Example</h3>
+<pre><code class="lang-graphql">subscription WatchProject($projectId: ID, $types: [ProjectEventType!]) {
+  projectChanged(projectId: $projectId, types: $types) {
+    type
+    occurredAt
+    project {
+      id
+      name
+      status
+    }
+    actor {
+      name
+    }
+  }
 }
 </code></pre>
-<h3 id="fields">Fields</h3>
-<h4 id="statecodestring-scalar"><a href="#"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-parent">State</code>.<code class="gqlmd-mdx-entity-name">code</code></span></a><span class="gqlmd-mdx-bullet"> ● </span><a href="../scalars/string.html"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-name">String</code></span></a> <span class="badge text-bg-secondary">scalar</span></h4>
-<h4 id="statenamestring-non-null-scalar"><a href="#"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-parent">State</code>.<code class="gqlmd-mdx-entity-name">name</code></span></a><span class="gqlmd-mdx-bullet"> ● </span><a href="../scalars/string.html"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-name">String!</code></span></a> <span class="badge text-bg-primary">non-null</span> <span class="badge text-bg-secondary">scalar</span></h4>
-<h4 id="statecountrycountry-non-null-object"><a href="#"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-parent">State</code>.<code class="gqlmd-mdx-entity-name">country</code></span></a><span class="gqlmd-mdx-bullet"> ● </span><a href="country.html"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-name">Country!</code></span></a> <span class="badge text-bg-primary">non-null</span> <span class="badge text-bg-secondary">object</span></h4>
-<h3 id="member-of">Member Of</h3>
-<p><a href="country.html"><code>Country</code></a>  <span class="badge text-bg-info">object</span></p>
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/graphql-markdown/demo-docfx/blob/main/docs/graphql/types/objects/state.md/#L1" class="edit-link">Edit this page</a>
+          <a href="https://github.com/graphql-markdown/demo-docfx/blob/main/docs/graphql/operations/subscriptions/project-changed.md/#L1" class="edit-link">Edit this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>
@@ -121,7 +138,7 @@
     <footer class="border-top text-secondary">
       <div class="container-xxl">
         <div class="flex-fill">
-          Generated with <a href="https://graphql-markdown.dev">GraphQL-Markdown</a> · <a href="https://github.com/graphql-markdown/graphql-markdown">⭐ Star on GitHub</a>
+          <div class="text-center">Generated with <a href="https://graphql-markdown.dev">GraphQL-Markdown</a> · <a href="https://github.com/graphql-markdown/graphql-markdown">⭐ Star on GitHub</a></div>
         </div>
       </div>
     </footer>

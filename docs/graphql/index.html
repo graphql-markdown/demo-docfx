@@ -87,12 +87,14 @@
         <article data-uid="">
 <h1 id="graphql-api-reference">GraphQL API Reference</h1>
 
-<p>This section contains the auto-generated API reference for the Countries GraphQL schema, produced by <a href="https://graphql-markdown.github.io">graphql-markdown</a> using the DocFX formatter.</p>
+<p>This section contains the auto-generated API reference for the <a href="https://github.com/graphql-markdown/graphql-markdown/blob/main/tests/e2e/__data__/demo_schema.graphql">shared GraphQL-Markdown demo schema</a>, produced by <a href="https://graphql-markdown.github.io">graphql-markdown</a> using the DocFX formatter.</p>
 <h2 id="schema-overview">Schema overview</h2>
-<p>The Countries API exposes the following root types:</p>
+<p>The demo API models a small project workspace:</p>
 <ul>
-<li><strong>Queries</strong> — fetch continents, countries, and languages</li>
-<li><strong>Objects</strong> — <code>Continent</code>, <code>Country</code>, <code>Language</code>, <code>State</code></li>
+<li><strong>Queries</strong> — list folders and projects, and search across them</li>
+<li><strong>Mutations</strong> — create folders and projects, archive projects</li>
+<li><strong>Subscriptions</strong> — follow project changes and new folders</li>
+<li><strong>Types</strong> — <code>Folder</code>, <code>Project</code>, <code>User</code> (all implementing <code>Node</code>), the <code>SearchResult</code> union, enums, inputs and custom directives</li>
 </ul>
 <h2 id="usage">Usage</h2>
 <p>Browse the sections in the left navigation to explore available queries and types.</p>
@@ -117,7 +119,7 @@
     <footer class="border-top text-secondary">
       <div class="container-xxl">
         <div class="flex-fill">
-          Generated with <a href="https://graphql-markdown.dev">GraphQL-Markdown</a> · <a href="https://github.com/graphql-markdown/graphql-markdown">⭐ Star on GitHub</a>
+          <div class="text-center">Generated with <a href="https://graphql-markdown.dev">GraphQL-Markdown</a> · <a href="https://github.com/graphql-markdown/graphql-markdown">⭐ Star on GitHub</a></div>
         </div>
       </div>
     </footer>

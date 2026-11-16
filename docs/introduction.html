@@ -93,10 +93,10 @@
 <ul>
 <li>Injects a <code>uid</code> field in YAML front matter for cross-reference resolution</li>
 <li>Uses DocFX alert syntax (<code>&gt; [!NOTE]</code>, <code>&gt; [!WARNING]</code>, etc.) for admonitions</li>
-<li>Renders badges as inline <code>&lt;mark&gt;</code> elements</li>
+<li>Renders badges as Bootstrap <code>&lt;span class=&quot;badge&quot;&gt;</code> elements, styled as pills by the demo template</li>
 </ul>
 <h2 id="schema">Schema</h2>
-<p>The demo uses the <a href="https://github.com/trevorblades/countries">Countries API</a> schema — a simple public GraphQL API exposing continents, countries, and languages.</p>
+<p>The demo uses the <a href="https://github.com/graphql-markdown/graphql-markdown/blob/main/tests/e2e/__data__/demo_schema.graphql">shared GraphQL-Markdown demo schema</a>, the same small project-workspace API documented by every GraphQL-Markdown demo. It is loaded from its raw URL at generation time.</p>
 <h2 id="source">Source</h2>
 <p>See <a href="getting-started.html">Getting Started</a> to run the demo locally.</p>
 
@@ -120,7 +120,7 @@
     <footer class="border-top text-secondary">
       <div class="container-xxl">
         <div class="flex-fill">
-          Generated with <a href="https://graphql-markdown.dev">GraphQL-Markdown</a> · <a href="https://github.com/graphql-markdown/graphql-markdown">⭐ Star on GitHub</a>
+          <div class="text-center">Generated with <a href="https://graphql-markdown.dev">GraphQL-Markdown</a> · <a href="https://github.com/graphql-markdown/graphql-markdown">⭐ Star on GitHub</a></div>
         </div>
       </div>
     </footer>

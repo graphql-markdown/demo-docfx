@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>country | GraphQL Documentation with Docfx </title>
+      <title>ProjectConnection | GraphQL Documentation with Docfx </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="country | GraphQL Documentation with Docfx ">
+      <meta name="title" content="ProjectConnection | GraphQL Documentation with Docfx ">
       
       
       <link rel="icon" href="../../../../favicon.ico">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../../../../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/graphql-markdown/demo-docfx/blob/main/docs/graphql/operations/queries/country.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/graphql-markdown/demo-docfx/blob/main/docs/graphql/types/objects/project-connection.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -84,23 +84,43 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="operations-queries-country">
+        <article data-uid="types-objects-project-connection">
+<h1 id="projectconnection">ProjectConnection</h1>
 
-
-<p>No description</p>
-<pre><code class="lang-graphql">country(
-  code: ID!
-): Country
+<p>A paginated project result set.</p>
+<pre><code class="lang-graphql">type ProjectConnection {
+  nodes: [Project!]!
+  totalCount: Int!
+}
 </code></pre>
-<h3 id="arguments">Arguments</h3>
-<h4 id="countrycodeid-non-null-scalar"><a href="#"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-parent">country</code>.<code class="gqlmd-mdx-entity-name">code</code></span></a><span class="gqlmd-mdx-bullet"> ● </span><a href="../../types/scalars/id.html"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-name">ID!</code></span></a> <span class="badge text-bg-primary">non-null</span> <span class="badge text-bg-secondary">scalar</span></h4>
-<h3 id="type">Type</h3>
-<h4 id="country-object"><a href="../../types/objects/country.html"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-name">Country</code></span></a> <span class="badge text-bg-secondary">object</span></h4>
+<h3 id="fields">Fields</h3>
+<h4 id="projectconnectionnodesproject-non-null-object"><a href="#"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-parent">ProjectConnection</code>.<code class="gqlmd-mdx-entity-name">nodes</code></span></a><span class="gqlmd-mdx-bullet"> ● </span><a href="project.html"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-name">[Project!]!</code></span></a> <span class="badge text-bg-primary">non-null</span> <span class="badge text-bg-secondary">object</span></h4>
+<p>Projects in the current result page.</p>
+<h4 id="projectconnectiontotalcountint-non-null-scalar"><a href="#"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-parent">ProjectConnection</code>.<code class="gqlmd-mdx-entity-name">totalCount</code></span></a><span class="gqlmd-mdx-bullet"> ● </span><a href="../scalars/int.html"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-name">Int!</code></span></a> <span class="badge text-bg-primary">non-null</span> <span class="badge text-bg-secondary">scalar</span></h4>
+<p>The total number of projects matching the query.</p>
+<h3 id="example">Example</h3>
+<pre><code class="lang-graphql">{
+  &quot;nodes&quot;: [
+    {
+      &quot;id&quot;: &quot;project_01&quot;,
+      &quot;name&quot;: &quot;Mobile Refresh&quot;,
+      &quot;status&quot;: &quot;ACTIVE&quot;,
+      &quot;owner&quot;: {
+        &quot;id&quot;: &quot;user_01&quot;,
+        &quot;name&quot;: &quot;Avery Chen&quot;
+      },
+      &quot;updatedAt&quot;: &quot;2026-09-05T10:15:00Z&quot;
+    }
+  ]
+}
+</code></pre>
+<h3 id="returned-by">Returned By</h3>
+<p><a href="../../operations/queries/projects.html"><code>projects</code></a>  <span class="badge text-bg-info">query</span></p>
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/graphql-markdown/demo-docfx/blob/main/docs/graphql/operations/queries/country.md/#L1" class="edit-link">Edit this page</a>
+          <a href="https://github.com/graphql-markdown/demo-docfx/blob/main/docs/graphql/types/objects/project-connection.md/#L1" class="edit-link">Edit this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>
@@ -117,7 +137,7 @@
     <footer class="border-top text-secondary">
       <div class="container-xxl">
         <div class="flex-fill">
-          Generated with <a href="https://graphql-markdown.dev">GraphQL-Markdown</a> · <a href="https://github.com/graphql-markdown/graphql-markdown">⭐ Star on GitHub</a>
+          <div class="text-center">Generated with <a href="https://graphql-markdown.dev">GraphQL-Markdown</a> · <a href="https://github.com/graphql-markdown/graphql-markdown">⭐ Star on GitHub</a></div>
         </div>
       </div>
     </footer>

@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>continents | GraphQL Documentation with Docfx </title>
+      <title>deprecatedType | GraphQL Documentation with Docfx </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="continents | GraphQL Documentation with Docfx ">
+      <meta name="title" content="deprecatedType | GraphQL Documentation with Docfx ">
       
       
       <link rel="icon" href="../../../../favicon.ico">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../../../../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/graphql-markdown/demo-docfx/blob/main/docs/graphql/operations/queries/continents.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/graphql-markdown/demo-docfx/blob/main/docs/graphql/types/directives/deprecated-type.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -84,19 +84,21 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="operations-queries-continents">
+        <article data-uid="types-directives-deprecated-type">
+<h1 id="deprecatedtype">deprecatedType</h1>
 
-
-<p>No description</p>
-<pre><code class="lang-graphql">continents: [Continent!]!
+<p>Marks an object type as superseded when standard @deprecated cannot be applied.</p>
+<pre><code class="lang-graphql">directive @deprecatedType(
+  reason: String!
+) on OBJECT
 </code></pre>
-<h3 id="type">Type</h3>
-<h4 id="continent-object"><a href="../../types/objects/continent.html"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-name">Continent</code></span></a> <span class="badge text-bg-secondary">object</span></h4>
+<h3 id="arguments">Arguments</h3>
+<h4 id="deprecatedtypereasonstring-non-null-scalar"><a href="#"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-parent">deprecatedType</code>.<code class="gqlmd-mdx-entity-name">reason</code></span></a><span class="gqlmd-mdx-bullet"> ● </span><a href="../scalars/string.html"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-name">String!</code></span></a> <span class="badge text-bg-primary">non-null</span> <span class="badge text-bg-secondary">scalar</span></h4>
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/graphql-markdown/demo-docfx/blob/main/docs/graphql/operations/queries/continents.md/#L1" class="edit-link">Edit this page</a>
+          <a href="https://github.com/graphql-markdown/demo-docfx/blob/main/docs/graphql/types/directives/deprecated-type.md/#L1" class="edit-link">Edit this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>
@@ -113,7 +115,7 @@
     <footer class="border-top text-secondary">
       <div class="container-xxl">
         <div class="flex-fill">
-          Generated with <a href="https://graphql-markdown.dev">GraphQL-Markdown</a> · <a href="https://github.com/graphql-markdown/graphql-markdown">⭐ Star on GitHub</a>
+          <div class="text-center">Generated with <a href="https://graphql-markdown.dev">GraphQL-Markdown</a> · <a href="https://github.com/graphql-markdown/graphql-markdown">⭐ Star on GitHub</a></div>
         </div>
       </div>
     </footer>

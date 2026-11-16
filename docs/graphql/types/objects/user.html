@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Language | GraphQL Documentation with Docfx </title>
+      <title>User | GraphQL Documentation with Docfx </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Language | GraphQL Documentation with Docfx ">
+      <meta name="title" content="User | GraphQL Documentation with Docfx ">
       
       
       <link rel="icon" href="../../../../favicon.ico">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../../../../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/graphql-markdown/demo-docfx/blob/main/docs/graphql/types/objects/language.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/graphql-markdown/demo-docfx/blob/main/docs/graphql/types/objects/user.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -84,31 +84,46 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="types-objects-language">
+        <article data-uid="types-objects-user">
+<h1 id="user">User</h1>
 
-
-<p>No description</p>
-<pre><code class="lang-graphql">type Language {
-  code: ID!
+<p>A workspace member who owns and collaborates on projects.</p>
+<pre><code class="lang-graphql">type User implements Node {
+  id: ID!
   name: String!
-  native: String
-  rtl: Boolean
+  email: String!
+  role: String!
 }
 </code></pre>
 <h3 id="fields">Fields</h3>
-<h4 id="languagecodeid-non-null-scalar"><a href="#"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-parent">Language</code>.<code class="gqlmd-mdx-entity-name">code</code></span></a><span class="gqlmd-mdx-bullet"> ● </span><a href="../scalars/id.html"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-name">ID!</code></span></a> <span class="badge text-bg-primary">non-null</span> <span class="badge text-bg-secondary">scalar</span></h4>
-<h4 id="languagenamestring-non-null-scalar"><a href="#"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-parent">Language</code>.<code class="gqlmd-mdx-entity-name">name</code></span></a><span class="gqlmd-mdx-bullet"> ● </span><a href="../scalars/string.html"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-name">String!</code></span></a> <span class="badge text-bg-primary">non-null</span> <span class="badge text-bg-secondary">scalar</span></h4>
-<h4 id="languagenativestring-scalar"><a href="#"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-parent">Language</code>.<code class="gqlmd-mdx-entity-name">native</code></span></a><span class="gqlmd-mdx-bullet"> ● </span><a href="../scalars/string.html"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-name">String</code></span></a> <span class="badge text-bg-secondary">scalar</span></h4>
-<h4 id="languagertlboolean-scalar"><a href="#"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-parent">Language</code>.<code class="gqlmd-mdx-entity-name">rtl</code></span></a><span class="gqlmd-mdx-bullet"> ● </span><a href="../scalars/boolean.html"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-name">Boolean</code></span></a> <span class="badge text-bg-secondary">scalar</span></h4>
-<h3 id="returned-by">Returned By</h3>
-<p><a href="../../operations/queries/language.html"><code>language</code></a>  <span class="badge text-bg-info">query</span><span class="gqlmd-mdx-bullet"> ● </span><a href="../../operations/queries/languages.html"><code>languages</code></a>  <span class="badge text-bg-info">query</span></p>
+<h4 id="useridid-non-null-scalar"><a href="#"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-parent">User</code>.<code class="gqlmd-mdx-entity-name">id</code></span></a><span class="gqlmd-mdx-bullet"> ● </span><a href="../scalars/id.html"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-name">ID!</code></span></a> <span class="badge text-bg-primary">non-null</span> <span class="badge text-bg-secondary">scalar</span></h4>
+<p>The unique identifier of the user.</p>
+<h4 id="usernamestring-non-null-scalar"><a href="#"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-parent">User</code>.<code class="gqlmd-mdx-entity-name">name</code></span></a><span class="gqlmd-mdx-bullet"> ● </span><a href="../scalars/string.html"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-name">String!</code></span></a> <span class="badge text-bg-primary">non-null</span> <span class="badge text-bg-secondary">scalar</span></h4>
+<p>The user's display name.</p>
+<h4 id="useremailstring-non-null-scalar"><a href="#"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-parent">User</code>.<code class="gqlmd-mdx-entity-name">email</code></span></a><span class="gqlmd-mdx-bullet"> ● </span><a href="../scalars/string.html"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-name">String!</code></span></a> <span class="badge text-bg-primary">non-null</span> <span class="badge text-bg-secondary">scalar</span></h4>
+<p>The user's primary email address.</p>
+<h4 id="userrolestring-non-null-scalar"><a href="#"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-parent">User</code>.<code class="gqlmd-mdx-entity-name">role</code></span></a><span class="gqlmd-mdx-bullet"> ● </span><a href="../scalars/string.html"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-name">String!</code></span></a> <span class="badge text-bg-primary">non-null</span> <span class="badge text-bg-secondary">scalar</span></h4>
+<p>The user's role in the workspace.</p>
+<h3 id="interfaces">Interfaces</h3>
+<h4 id="node-interface"><a href="../interfaces/node.html"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-name">Node</code></span></a> <span class="badge text-bg-secondary">interface</span></h4>
+<p>A globally unique entity identifier.</p>
+<h3 id="example">Example</h3>
+<pre><code class="lang-graphql">{
+  &quot;id&quot;: &quot;user_01&quot;,
+  &quot;name&quot;: &quot;Avery Chen&quot;,
+  &quot;email&quot;: &quot;avery@example.com&quot;,
+  &quot;role&quot;: &quot;Product Lead&quot;
+}
+</code></pre>
 <h3 id="member-of">Member Of</h3>
-<p><a href="country.html"><code>Country</code></a>  <span class="badge text-bg-info">object</span></p>
+<p><a href="project.html"><code>Project</code></a>  <span class="badge text-bg-info">object</span><span class="gqlmd-mdx-bullet"> ● </span><a href="project-event.html"><code>ProjectEvent</code></a>  <span class="badge text-bg-info">object</span></p>
+<h3 id="implemented-by">Implemented By</h3>
+<p><a href="../unions/search-result.html"><code>SearchResult</code></a>  <span class="badge text-bg-info">union</span></p>
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/graphql-markdown/demo-docfx/blob/main/docs/graphql/types/objects/language.md/#L1" class="edit-link">Edit this page</a>
+          <a href="https://github.com/graphql-markdown/demo-docfx/blob/main/docs/graphql/types/objects/user.md/#L1" class="edit-link">Edit this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>
@@ -125,7 +140,7 @@
     <footer class="border-top text-secondary">
       <div class="container-xxl">
         <div class="flex-fill">
-          Generated with <a href="https://graphql-markdown.dev">GraphQL-Markdown</a> · <a href="https://github.com/graphql-markdown/graphql-markdown">⭐ Star on GitHub</a>
+          <div class="text-center">Generated with <a href="https://graphql-markdown.dev">GraphQL-Markdown</a> · <a href="https://github.com/graphql-markdown/graphql-markdown">⭐ Star on GitHub</a></div>
         </div>
       </div>
     </footer>
