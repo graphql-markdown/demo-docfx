@@ -114,6 +114,10 @@ npm run dev
 <td>Generate docs + build a static site to <code>_site/</code></td>
 </tr>
 <tr>
+<td><code>npm run test:visual</code></td>
+<td>Run Playwright + Argos visual tests against <code>_site/</code> (build first)</td>
+</tr>
+<tr>
 <td><code>npm run clean</code></td>
 <td>Remove generated files and build output</td>
 </tr>
@@ -138,8 +142,9 @@ npm run dev
 ├── template/public/                # DocFX modern template overrides
 │   ├── main.css                    # Styles for generated GraphQL pages (light/dark)
 │   └── main.js                     # Points field names at their heading anchors
+├── tests/visual/                   # Playwright + Argos screenshot tests
 ├── docfx.json                      # DocFX site configuration
-├── index.md                        # Site root (redirects to introduction)
+├── index.md                        # Landing page (raw HTML, styled by main.css)
 ├── toc.yml                         # Top-level navigation
 └── package.json
 </code></pre>
@@ -165,7 +170,6 @@ npm run dev
           <a href="https://github.com/graphql-markdown/demo-docfx/blob/main/README.md/#L1" class="edit-link">Edit this page</a>
         </div>
 
-        <div class="next-article d-print-none border-top" id="nextArticle"></div>
 
       </div>
 
