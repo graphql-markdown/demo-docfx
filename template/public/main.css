@@ -8,26 +8,26 @@
  * are both covered.
  */
 
-/* Violet accent (violet-700 light, violet-300 dark) */
+/* .NET purple accent (#512bd4 light, #a48ff0 dark) */
 :root,
 [data-bs-theme="light"] {
-  --bs-primary: #6d28d9;
-  --bs-primary-rgb: 109, 40, 217;
-  --bs-link-color: #6d28d9;
-  --bs-link-color-rgb: 109, 40, 217;
-  --bs-link-hover-color: #5b21b6;
-  --bs-link-hover-color-rgb: 91, 33, 182;
+  --bs-primary: #512bd4;
+  --bs-primary-rgb: 81, 43, 212;
+  --bs-link-color: #512bd4;
+  --bs-link-color-rgb: 81, 43, 212;
+  --bs-link-hover-color: #3f1fa8;
+  --bs-link-hover-color-rgb: 63, 31, 168;
 }
 
 [data-bs-theme="dark"] {
-  --bs-primary: #b9a4ff;
-  --bs-primary-rgb: 185, 164, 255;
-  --bs-link-color: #b9a4ff;
-  --bs-link-color-rgb: 185, 164, 255;
-  --bs-link-hover-color: #d4c7ff;
-  --bs-link-hover-color-rgb: 212, 199, 255;
-  --bs-primary-bg-subtle: color-mix(in oklch, #b9a4ff 15%, transparent);
-  --bs-primary-text-emphasis: #d4c7ff;
+  --bs-primary: #a48ff0;
+  --bs-primary-rgb: 164, 143, 240;
+  --bs-link-color: #a48ff0;
+  --bs-link-color-rgb: 164, 143, 240;
+  --bs-link-hover-color: #c0b2f5;
+  --bs-link-hover-color-rgb: 192, 178, 245;
+  --bs-primary-bg-subtle: color-mix(in oklch, #a48ff0 15%, transparent);
+  --bs-primary-text-emphasis: #c0b2f5;
 }
 
 article {
@@ -432,10 +432,10 @@ article .alert > p:last-child {
 .gqlmd-preview-chip {
   padding: 0.25rem 0.5rem;
   border-radius: 0.25rem;
-  background: rgb(216 180 254 / 0.1);
+  background: rgb(164 143 240 / 0.1);
   font-family: var(--bs-font-monospace);
   font-size: 0.75rem;
-  color: #c4b5fd;
+  color: #a48ff0;
 }
 
 .gqlmd-preview pre {
