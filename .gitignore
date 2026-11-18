@@ -3,3 +3,7 @@ _site/
 node_modules/
 .vscode/
 .DS_Store
+test-results/
+playwright-report/
+blob-report/
+screenshots/
