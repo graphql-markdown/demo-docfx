@@ -31,6 +31,7 @@ dotnet tool install -g docfx
 | `npm run generate` | Generate docs from the GraphQL schema |
 | `npm run dev` | Generate docs + serve a local DocFX preview |
 | `npm run build` | Generate docs + build a static site to `_site/` |
+| `npm run test:visual` | Run Playwright + Argos visual tests against `_site/` (build first) |
 | `npm run clean` | Remove generated files and build output |
 
 ## Project structure
@@ -54,8 +55,9 @@ dotnet tool install -g docfx
 ├── template/public/                # DocFX modern template overrides
 │   ├── main.css                    # Styles for generated GraphQL pages (light/dark)
 │   └── main.js                     # Points field names at their heading anchors
+├── tests/visual/                   # Playwright + Argos screenshot tests
 ├── docfx.json                      # DocFX site configuration
-├── index.md                        # Site root (redirects to introduction)
+├── index.md                        # Landing page (raw HTML, styled by main.css)
 ├── toc.yml                         # Top-level navigation
 └── package.json
 ```

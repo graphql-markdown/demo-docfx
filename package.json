@@ -7,12 +7,18 @@
     "clean": "rm -rf ./docs/graphql ./_site",
     "generate": "node ./scripts/generate-docs.mjs",
     "dev": "npm run generate && docfx docfx.json --serve",
-    "build": "npm run generate && docfx docfx.json"
+    "build": "npm run generate && docfx docfx.json",
+    "test:visual": "playwright test"
   },
   "dependencies": {
     "@graphql-markdown/cli": "^1.2.3",
     "@graphql-markdown/formatters": "^1.2.3",
     "@graphql-tools/url-loader": "^10.0.9",
     "graphql": "^17.1.0"
+  },
+  "devDependencies": {
+    "@argos-ci/playwright": "^7.9.0",
+    "@playwright/test": "^1.65.1",
+    "serve": "^14.2.8"
   }
 }
