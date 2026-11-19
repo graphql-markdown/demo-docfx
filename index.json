@@ -1,197 +1,197 @@
 {
   "README.html": {
     "href": "README.html",
-    "title": "GraphQL-Markdown + DocFX demo | GraphQL Documentation with Docfx",
+    "title": "GraphQL-Markdown + DocFX demo | GraphQL-Markdown",
     "summary": "GraphQL-Markdown + DocFX demo This project demonstrates how to generate GraphQL documentation with GraphQL-Markdown for a DocFX site using the modern template. Live demo: graphql-markdown.dev/demo-docfx Quick start npm install npm run dev Open http://localhost:8080/ and browse the GraphQL API section in the left navigation. Prerequisites Node.js 20 or later .NET SDK 8 or later DocFX installed as a global .NET tool: dotnet tool install -g docfx Commands Command Action npm install Install dependencies npm run generate Generate docs from the GraphQL schema npm run dev Generate docs + serve a local DocFX preview npm run build Generate docs + build a static site to _site/ npm run test:visual Run Playwright + Argos visual tests against _site/ (build first) npm run clean Remove generated files and build output Project structure . ├── content/ │ └── index.md # Homepage source for the GraphQL API section ├── docs/ │ ├── graphql/ # Generated GraphQL documentation │ │ ├── index.md # GraphQL API overview (copied from content/index.md) │ │ ├── toc.yml # Generated navigation │ │ ├── operations/ # Queries, mutations, subscriptions │ │ └── types/ # Objects, scalars, directives │ ├── introduction.md │ ├── getting-started.md │ └── toc.yml ├── scripts/ │ ├── custom-docfx-mdx.mjs # Custom MDX formatter (badge colors, page H1 title) │ └── generate-docs.mjs # GraphQL-Markdown runner ├── template/public/ # DocFX modern template overrides │ ├── main.css # Styles for generated GraphQL pages (light/dark) │ └── main.js # Points field names at their heading anchors ├── tests/visual/ # Playwright + Argos screenshot tests ├── docfx.json # DocFX site configuration ├── index.md # Landing page (raw HTML, styled by main.css) ├── toc.yml # Top-level navigation └── package.json Notes The documented schema is the shared GraphQL-Markdown demo schema used by all GraphQL-Markdown demos, loaded from its raw URL at generation time. The preset @graphql-markdown/formatters/docfx provides: DocFX alert syntax (> [!NOTE], > [!WARNING], etc.) for admonitions Bootstrap 5 badge classes (badge text-bg-{variant}) for type badges Path-derived uid front matter for unique DocFX cross-reference targets (e.g. operations-queries-projects) afterRenderTypeEntitiesHook that builds toc.yml navigation files at every directory level automatically Badge colors can be customized in scripts/custom-docfx-mdx.mjs by spreading BADGE_CLASS_MAP and overriding individual entries. template/public/main.css restyles the formatter output (entity chips, pill badges, field rows, code blocks, alerts) using Bootstrap theme variables, so it follows DocFX's light/dark switch. toc.yml files in docs/graphql/ are generated at doc-generation time and should not be edited manually."
   },
   "docs/getting-started.html": {
     "href": "docs/getting-started.html",
-    "title": "Getting Started | GraphQL Documentation with Docfx",
+    "title": "Getting Started | GraphQL-Markdown",
     "summary": "Getting Started Prerequisites Node.js 20 or later .NET SDK 8 or later DocFX installed as a global .NET tool: dotnet tool install -g docfx Install dependencies npm install Generate the GraphQL docs npm run generate This runs graphql-markdown against the shared demo schema (loaded from its URL) and writes Markdown pages to docs/graphql/. It also builds the DocFX toc.yml navigation files for each section via the custom formatter hook. Serve locally npm run dev This generates the docs then starts a DocFX local server at http://localhost:8080. Build static site npm run build The built site is written to _site/."
   },
   "docs/graphql/index.html": {
     "href": "docs/graphql/index.html",
-    "title": "GraphQL API Reference | GraphQL Documentation with Docfx",
+    "title": "GraphQL API Reference | GraphQL-Markdown",
     "summary": "GraphQL API Reference This section contains the auto-generated API reference for the shared GraphQL-Markdown demo schema, produced by graphql-markdown using the DocFX formatter. Schema overview The demo API models a small project workspace: Queries — list folders and projects, and search across them Mutations — create folders and projects, archive projects Subscriptions — follow project changes and new folders Types — Folder, Project, User (all implementing Node), the SearchResult union, enums, inputs and custom directives Usage Browse the sections in the left navigation to explore available queries and types."
   },
   "docs/graphql/operations/directives/include.html": {
     "href": "docs/graphql/operations/directives/include.html",
-    "title": "include | GraphQL Documentation with Docfx",
+    "title": "include | GraphQL-Markdown",
     "summary": "include Directs the executor to include this field or fragment only when the if argument is true. directive @include( if: Boolean! ) on | FIELD | FRAGMENT_SPREAD | INLINE_FRAGMENT Arguments include.if ● Boolean! non-null scalar Included when true."
   },
   "docs/graphql/operations/directives/skip.html": {
     "href": "docs/graphql/operations/directives/skip.html",
-    "title": "skip | GraphQL Documentation with Docfx",
+    "title": "skip | GraphQL-Markdown",
     "summary": "skip Directs the executor to skip this field or fragment when the if argument is true. directive @skip( if: Boolean! ) on | FIELD | FRAGMENT_SPREAD | INLINE_FRAGMENT Arguments skip.if ● Boolean! non-null scalar Skipped when true."
   },
   "docs/graphql/operations/mutations/archive-project.html": {
     "href": "docs/graphql/operations/mutations/archive-project.html",
-    "title": "archiveProject | GraphQL Documentation with Docfx",
+    "title": "archiveProject | GraphQL-Markdown",
     "summary": "archiveProject Archive a project that is no longer active. archiveProject( id: ID! ): Project! Arguments archiveProject.id ● ID! non-null scalar The unique identifier of the project to archive. Type Project object A unit of work tracked in the workspace. Example mutation ArchiveProject($id: ID!) { archiveProject(id: $id) { id name status updatedAt } }"
   },
   "docs/graphql/operations/mutations/create-folder.html": {
     "href": "docs/graphql/operations/mutations/create-folder.html",
-    "title": "createFolder | GraphQL Documentation with Docfx",
+    "title": "createFolder | GraphQL-Markdown",
     "summary": "createFolder Create a virtual folder in the workspace. createFolder( name: String! parentId: ID ): Folder! Arguments createFolder.name ● String! non-null scalar The name of the new folder. createFolder.parentId ● ID scalar The optional parent folder identifier. Type Folder object A virtual folder used to organize workspace resources. Example mutation CreateFolder($name: String!, $parentId: ID) { createFolder(name: $name, parentId: $parentId) { id name } }"
   },
   "docs/graphql/operations/mutations/create-project.html": {
     "href": "docs/graphql/operations/mutations/create-project.html",
-    "title": "createProject | GraphQL Documentation with Docfx",
+    "title": "createProject | GraphQL-Markdown",
     "summary": "createProject Create a project and assign its initial owner. createProject( input: CreateProjectInput! ): Project! Arguments createProject.input ● CreateProjectInput! non-null input The project attributes to create. Type Project object A unit of work tracked in the workspace. Example mutation CreateProject($input: CreateProjectInput!) { createProject(input: $input) { id name status folder { id name } } }"
   },
   "docs/graphql/operations/queries/folder.html": {
     "href": "docs/graphql/operations/queries/folder.html",
-    "title": "folder | GraphQL Documentation with Docfx",
+    "title": "folder | GraphQL-Markdown",
     "summary": "folder Fetch a single folder by its unique identifier. folder( id: ID! ): Folder Arguments folder.id ● ID! non-null scalar The unique identifier of the folder to retrieve. Type Folder object A virtual folder used to organize workspace resources. Example query GetFolder($id: ID!) { folder(id: $id) { id name parent createdAt } }"
   },
   "docs/graphql/operations/queries/folders.html": {
     "href": "docs/graphql/operations/queries/folders.html",
-    "title": "folders | GraphQL Documentation with Docfx",
+    "title": "folders | GraphQL-Markdown",
     "summary": "folders List folders available in the current workspace. folders( limit: Int offset: Int ): [Folder!]! Arguments folders.limit ● Int scalar Maximum number of folders to return. folders.offset ● Int scalar Number of folders to skip before returning results. Type Folder object A virtual folder used to organize workspace resources. Example query ListFolders { folders { id name parent createdAt } }"
   },
   "docs/graphql/operations/queries/projects.html": {
     "href": "docs/graphql/operations/queries/projects.html",
-    "title": "projects | GraphQL Documentation with Docfx",
+    "title": "projects | GraphQL-Markdown",
     "summary": "projects List projects, optionally filtered by lifecycle status. projects( status: ProjectStatus limit: Int ): ProjectConnection! Arguments projects.status ● ProjectStatus enum Limit results to projects in this lifecycle stage. projects.limit ● Int scalar Maximum number of projects to return. Defaults to 20. Type ProjectConnection object A paginated project result set. Example query ListActiveProjects($status: ProjectStatus) { projects(status: $status) { totalCount nodes { id name status owner { name } } } }"
   },
   "docs/graphql/operations/queries/search.html": {
     "href": "docs/graphql/operations/queries/search.html",
-    "title": "search | GraphQL Documentation with Docfx",
+    "title": "search | GraphQL-Markdown",
     "summary": "search Search folders, projects, and users from a single endpoint. search( query: String! ): [SearchResult!]! Arguments search.query ● String! non-null scalar Text matched against folder, project, and user names. Type SearchResult union A result returned from global workspace search. Example query SearchWorkspace($query: String!) { search(query: $query) { __typename ... on Folder { id name } ... on Project { id name status } ... on User { id name email } } }"
   },
   "docs/graphql/operations/subscriptions/folder-created.html": {
     "href": "docs/graphql/operations/subscriptions/folder-created.html",
-    "title": "folderCreated | GraphQL Documentation with Docfx",
+    "title": "folderCreated | GraphQL-Markdown",
     "summary": "folderCreated Receive folders as they are created in the workspace. folderCreated( parentId: ID ): Folder! Arguments folderCreated.parentId ● ID scalar Limit events to folders created under this parent. Type Folder object A virtual folder used to organize workspace resources. Example subscription WatchFolders($parentId: ID) { folderCreated(parentId: $parentId) { id name parent createdAt } }"
   },
   "docs/graphql/operations/subscriptions/project-changed.html": {
     "href": "docs/graphql/operations/subscriptions/project-changed.html",
-    "title": "projectChanged | GraphQL Documentation with Docfx",
+    "title": "projectChanged | GraphQL-Markdown",
     "summary": "projectChanged Receive an event whenever a project changes in the workspace. projectChanged( projectId: ID types: [ProjectEventType!] ): ProjectEvent! Arguments projectChanged.projectId ● ID scalar Limit events to a single project. projectChanged.types ● [ProjectEventType!] list enum Limit events to these change kinds. Type ProjectEvent object A change delivered to subscribers watching a project. Example subscription WatchProject($projectId: ID, $types: [ProjectEventType!]) { projectChanged(projectId: $projectId, types: $types) { type occurredAt project { id name status } actor { name } } }"
   },
   "docs/graphql/types/directives/deprecated-type.html": {
     "href": "docs/graphql/types/directives/deprecated-type.html",
-    "title": "deprecatedType | GraphQL Documentation with Docfx",
+    "title": "deprecatedType | GraphQL-Markdown",
     "summary": "deprecatedType Marks an object type as superseded when standard @deprecated cannot be applied. directive @deprecatedType( reason: String! ) on OBJECT Arguments deprecatedType.reason ● String! non-null scalar"
   },
   "docs/graphql/types/directives/deprecated.html": {
     "href": "docs/graphql/types/directives/deprecated.html",
-    "title": "deprecated | GraphQL Documentation with Docfx",
+    "title": "deprecated | GraphQL-Markdown",
     "summary": "deprecated Marks an element of a GraphQL schema as no longer supported. directive @deprecated( reason: String! ) on | FIELD_DEFINITION | ARGUMENT_DEFINITION | INPUT_FIELD_DEFINITION | ENUM_VALUE | DIRECTIVE_DEFINITION Arguments deprecated.reason ● String! non-null scalar Explains why this element was deprecated, usually also including a suggestion for how to access supported similar data. Formatted using the Markdown syntax, as specified by CommonMark."
   },
   "docs/graphql/types/directives/example-response.html": {
     "href": "docs/graphql/types/directives/example-response.html",
-    "title": "exampleResponse | GraphQL Documentation with Docfx",
+    "title": "exampleResponse | GraphQL-Markdown",
     "summary": "exampleResponse Provides the JSON response returned by the @example operation, rendered alongside it in the generated API reference. directive @exampleResponse( value: String! ) on FIELD_DEFINITION Arguments exampleResponse.value ● String! non-null scalar"
   },
   "docs/graphql/types/directives/example-variables.html": {
     "href": "docs/graphql/types/directives/example-variables.html",
-    "title": "exampleVariables | GraphQL Documentation with Docfx",
+    "title": "exampleVariables | GraphQL-Markdown",
     "summary": "exampleVariables Provides the JSON variables sent with the @example operation, rendered under it in the generated API reference. directive @exampleVariables( value: String! ) on FIELD_DEFINITION Arguments exampleVariables.value ● String! non-null scalar"
   },
   "docs/graphql/types/directives/example.html": {
     "href": "docs/graphql/types/directives/example.html",
-    "title": "example | GraphQL Documentation with Docfx",
+    "title": "example | GraphQL-Markdown",
     "summary": "example Provides a GraphQL example that is rendered in the generated API reference. directive @example( value: String! ) on | FIELD_DEFINITION | OBJECT Arguments example.value ● String! non-null scalar"
   },
   "docs/graphql/types/directives/one-of.html": {
     "href": "docs/graphql/types/directives/one-of.html",
-    "title": "oneOf | GraphQL Documentation with Docfx",
+    "title": "oneOf | GraphQL-Markdown",
     "summary": "oneOf Indicates exactly one field must be supplied and this field must not be null. directive @oneOf on INPUT_OBJECT"
   },
   "docs/graphql/types/directives/specified-by.html": {
     "href": "docs/graphql/types/directives/specified-by.html",
-    "title": "specifiedBy | GraphQL Documentation with Docfx",
+    "title": "specifiedBy | GraphQL-Markdown",
     "summary": "specifiedBy Exposes a URL that specifies the behavior of this scalar. directive @specifiedBy( url: String! ) on SCALAR Arguments specifiedBy.url ● String! non-null scalar The URL that specifies the behavior of this scalar."
   },
   "docs/graphql/types/enums/project-event-type.html": {
     "href": "docs/graphql/types/enums/project-event-type.html",
-    "title": "ProjectEventType | GraphQL Documentation with Docfx",
+    "title": "ProjectEventType | GraphQL-Markdown",
     "summary": "ProjectEventType The kind of change that occurred on a project. enum ProjectEventType { CREATED UPDATED ARCHIVED } Values ProjectEventType.CREATED The project was created. ProjectEventType.UPDATED One or more project fields were updated. ProjectEventType.ARCHIVED The project was archived. Member Of projectChanged subscription ● ProjectEvent object"
   },
   "docs/graphql/types/enums/project-status.html": {
     "href": "docs/graphql/types/enums/project-status.html",
-    "title": "ProjectStatus | GraphQL Documentation with Docfx",
+    "title": "ProjectStatus | GraphQL-Markdown",
     "summary": "ProjectStatus The lifecycle stage of a project. enum ProjectStatus { DRAFT ACTIVE ARCHIVED } Values ProjectStatus.DRAFT The project is being planned and is not yet active. ProjectStatus.ACTIVE The project is active and available to collaborators. ProjectStatus.ARCHIVED The project is retained for history and no longer active. Member Of CreateProjectInput input ● Project object ● projects query"
   },
   "docs/graphql/types/inputs/create-project-input.html": {
     "href": "docs/graphql/types/inputs/create-project-input.html",
-    "title": "CreateProjectInput | GraphQL Documentation with Docfx",
+    "title": "CreateProjectInput | GraphQL-Markdown",
     "summary": "CreateProjectInput Input used to create a project. input CreateProjectInput { name: String! ownerId: ID! folderId: ID status: ProjectStatus } Fields CreateProjectInput.name ● String! non-null scalar The name for the new project. CreateProjectInput.ownerId ● ID! non-null scalar The identifier of the user who will own the project. CreateProjectInput.folderId ● ID scalar The optional folder that will contain the project. CreateProjectInput.status ● ProjectStatus enum The initial lifecycle stage for the project. Example {} Member Of createProject mutation"
   },
   "docs/graphql/types/interfaces/node.html": {
     "href": "docs/graphql/types/interfaces/node.html",
-    "title": "Node | GraphQL Documentation with Docfx",
+    "title": "Node | GraphQL-Markdown",
     "summary": "Node A globally unique entity identifier. interface Node { id: ID! } Fields Node.id ● ID! non-null scalar The globally unique identifier for this resource. Example {} Implemented By Folder object ● Project object ● User object"
   },
   "docs/graphql/types/objects/folder.html": {
     "href": "docs/graphql/types/objects/folder.html",
-    "title": "Folder | GraphQL Documentation with Docfx",
+    "title": "Folder | GraphQL-Markdown",
     "summary": "Folder A virtual folder used to organize workspace resources. type Folder implements Node { id: ID! name: String! parent: String createdAt: DateTime! } Fields Folder.id ● ID! non-null scalar The unique identifier of the folder. Folder.name ● String! non-null scalar The human-readable folder name. Folder.parent ● String scalar The identifier of the parent folder, when nested. Folder.createdAt ● DateTime! non-null scalar When the folder was created. Interfaces Node interface A globally unique entity identifier. Example { \"id\": \"folder_01\", \"name\": \"Product Planning\", \"parent\": \"folder_root\", \"createdAt\": \"2026-09-05T09:30:00Z\" } Returned By createFolder mutation ● folder query ● folderCreated subscription ● folders query Member Of Project object Implemented By SearchResult union"
   },
   "docs/graphql/types/objects/legacy-project.html": {
     "href": "docs/graphql/types/objects/legacy-project.html",
-    "title": "LegacyProject | GraphQL Documentation with Docfx",
+    "title": "LegacyProject | GraphQL-Markdown",
     "summary": "LegacyProject Use Project instead for active workspace work. type LegacyProject { id: ID! name: String! } Fields LegacyProject.id ● ID! non-null scalar The unique identifier of the legacy project. LegacyProject.name ● String! non-null scalar The legacy project name. Example {}"
   },
   "docs/graphql/types/objects/project-connection.html": {
     "href": "docs/graphql/types/objects/project-connection.html",
-    "title": "ProjectConnection | GraphQL Documentation with Docfx",
+    "title": "ProjectConnection | GraphQL-Markdown",
     "summary": "ProjectConnection A paginated project result set. type ProjectConnection { nodes: [Project!]! totalCount: Int! } Fields ProjectConnection.nodes ● [Project!]! non-null object Projects in the current result page. ProjectConnection.totalCount ● Int! non-null scalar The total number of projects matching the query. Example { \"nodes\": [ { \"id\": \"project_01\", \"name\": \"Mobile Refresh\", \"status\": \"ACTIVE\", \"owner\": { \"id\": \"user_01\", \"name\": \"Avery Chen\" }, \"updatedAt\": \"2026-09-05T10:15:00Z\" } ] } Returned By projects query"
   },
   "docs/graphql/types/objects/project-event.html": {
     "href": "docs/graphql/types/objects/project-event.html",
-    "title": "ProjectEvent | GraphQL Documentation with Docfx",
+    "title": "ProjectEvent | GraphQL-Markdown",
     "summary": "ProjectEvent A change delivered to subscribers watching a project. type ProjectEvent { type: ProjectEventType! project: Project! actor: User occurredAt: DateTime! } Fields ProjectEvent.type ● ProjectEventType! non-null enum The kind of change that occurred. ProjectEvent.project ● Project! non-null object The project in its state after the change. ProjectEvent.actor ● User object The user who triggered the change, when known. ProjectEvent.occurredAt ● DateTime! non-null scalar When the change occurred. Example { \"type\": \"UPDATED\", \"project\": { \"id\": \"project_01\", \"name\": \"Mobile Refresh\", \"status\": \"ACTIVE\" }, \"occurredAt\": \"2026-09-05T10:15:00Z\" } Returned By projectChanged subscription"
   },
   "docs/graphql/types/objects/project.html": {
     "href": "docs/graphql/types/objects/project.html",
-    "title": "Project | GraphQL Documentation with Docfx",
+    "title": "Project | GraphQL-Markdown",
     "summary": "Project A unit of work tracked in the workspace. type Project implements Node { id: ID! name: String! status: ProjectStatus! owner: User! folder: Folder updatedAt: DateTime! state: String @deprecated } Fields Project.id ● ID! non-null scalar The unique identifier of the project. Project.name ● String! non-null scalar The project name shown to collaborators. Project.status ● ProjectStatus! non-null enum The current lifecycle stage of the project. Project.owner ● User! non-null object The user responsible for the project. Project.folder ● Folder object The folder containing this project, when assigned. Project.updatedAt ● DateTime! non-null scalar When the project was last updated. Project.state ● String deprecated scalar Warning Replaced by the ProjectStatus enum on status. The project's lifecycle stage. Interfaces Node interface A globally unique entity identifier. Example { \"id\": \"project_01\", \"name\": \"Mobile Refresh\", \"status\": \"ACTIVE\", \"owner\": { \"id\": \"user_01\", \"name\": \"Avery Chen\" }, \"updatedAt\": \"2026-09-05T10:15:00Z\" } Returned By archiveProject mutation ● createProject mutation Member Of ProjectConnection object ● ProjectEvent object Implemented By SearchResult union"
   },
   "docs/graphql/types/objects/user.html": {
     "href": "docs/graphql/types/objects/user.html",
-    "title": "User | GraphQL Documentation with Docfx",
+    "title": "User | GraphQL-Markdown",
     "summary": "User A workspace member who owns and collaborates on projects. type User implements Node { id: ID! name: String! email: String! role: String! } Fields User.id ● ID! non-null scalar The unique identifier of the user. User.name ● String! non-null scalar The user's display name. User.email ● String! non-null scalar The user's primary email address. User.role ● String! non-null scalar The user's role in the workspace. Interfaces Node interface A globally unique entity identifier. Example { \"id\": \"user_01\", \"name\": \"Avery Chen\", \"email\": \"avery@example.com\", \"role\": \"Product Lead\" } Member Of Project object ● ProjectEvent object Implemented By SearchResult union"
   },
   "docs/graphql/types/scalars/boolean.html": {
     "href": "docs/graphql/types/scalars/boolean.html",
-    "title": "Boolean | GraphQL Documentation with Docfx",
+    "title": "Boolean | GraphQL-Markdown",
     "summary": "Boolean The Boolean scalar type represents true or false. scalar Boolean Member Of include directive ● skip directive"
   },
   "docs/graphql/types/scalars/date-time.html": {
     "href": "docs/graphql/types/scalars/date-time.html",
-    "title": "DateTime | GraphQL Documentation with Docfx",
+    "title": "DateTime | GraphQL-Markdown",
     "summary": "DateTime An ISO 8601 timestamp in UTC. scalar DateTime Member Of Folder object ● Project object ● ProjectEvent object"
   },
   "docs/graphql/types/scalars/id.html": {
     "href": "docs/graphql/types/scalars/id.html",
-    "title": "ID | GraphQL Documentation with Docfx",
+    "title": "ID | GraphQL-Markdown",
     "summary": "ID The ID scalar type represents a unique identifier, often used to refetch an object or as key for a cache. The ID type appears in a JSON response as a String; however, it is not intended to be human-readable. When expected as an input type, any string (such as \"4\") or integer (such as 4) input value will be accepted as an ID. scalar ID Member Of archiveProject mutation ● createFolder mutation ● CreateProjectInput input ● folder query ● Folder object ● folderCreated subscription ● LegacyProject object ● Node interface ● Project object ● projectChanged subscription ● User object"
   },
   "docs/graphql/types/scalars/int.html": {
     "href": "docs/graphql/types/scalars/int.html",
-    "title": "Int | GraphQL Documentation with Docfx",
+    "title": "Int | GraphQL-Markdown",
     "summary": "Int The Int scalar type represents non-fractional signed whole numeric values. Int can represent values between -(2^31) and 2^31 - 1. scalar Int Member Of folders query ● ProjectConnection object ● projects query"
   },
   "docs/graphql/types/scalars/string.html": {
     "href": "docs/graphql/types/scalars/string.html",
-    "title": "String | GraphQL Documentation with Docfx",
+    "title": "String | GraphQL-Markdown",
     "summary": "String The String scalar type represents textual data, represented as UTF-8 character sequences. The String type is most often used by GraphQL to represent free-form human-readable text. scalar String Member Of createFolder mutation ● CreateProjectInput input ● deprecated directive ● deprecatedType directive ● example directive ● exampleResponse directive ● exampleVariables directive ● Folder object ● LegacyProject object ● Project object ● search query ● specifiedBy directive ● User object"
   },
   "docs/graphql/types/unions/search-result.html": {
     "href": "docs/graphql/types/unions/search-result.html",
-    "title": "SearchResult | GraphQL Documentation with Docfx",
+    "title": "SearchResult | GraphQL-Markdown",
     "summary": "SearchResult A result returned from global workspace search. union SearchResult = Folder | Project | User Possible types SearchResult.Folder object A virtual folder used to organize workspace resources. SearchResult.Project object A unit of work tracked in the workspace. SearchResult.User object A workspace member who owns and collaborates on projects. Returned By search query"
   },
   "docs/introduction.html": {
     "href": "docs/introduction.html",
-    "title": "Introduction | GraphQL Documentation with Docfx",
+    "title": "Introduction | GraphQL-Markdown",
     "summary": "Introduction This demo shows how to use graphql-markdown with the DocFX formatter to generate API reference documentation from a GraphQL schema. How it works graphql-markdown introspects a GraphQL schema and generates Markdown pages for every query, mutation, type, input, enum, scalar, and directive. The DocFX formatter (@graphql-markdown/formatters/docfx) adapts the output for DocFX: Injects a uid field in YAML front matter for cross-reference resolution Uses DocFX alert syntax (> [!NOTE], > [!WARNING], etc.) for admonitions Renders badges as Bootstrap <span class=\"badge\"> elements, styled as pills by the demo template Schema The demo uses the shared GraphQL-Markdown demo schema, the same small project-workspace API documented by every GraphQL-Markdown demo. It is loaded from its raw URL at generation time. Source See Getting Started to run the demo locally."
   },
   "index.html": {
     "href": "index.html",
-    "title": "GraphQL-Markdown DocFX Demo | GraphQL Documentation with Docfx",
+    "title": "GraphQL-Markdown DocFX Demo | GraphQL-Markdown",
     "summary": "GRAPHQL SCHEMA REFERENCE Your API, mapped with intent. Explore a workspace schema generated by GraphQL-Markdown for DocFX, with operations, input types, relationships, and ready-to-run examples in one focused reference. Explore the API View an example New here? Read the introduction. workspace.graphqlSCHEMA type Project implements Node { id: ID! name: String! status: ProjectStatus! owner: User! } type Query { projects(status: ProjectStatus): ProjectConnection! } OPERATIONS Queries, mutations, subscriptions MODELS Objects, inputs, unions, enums EXAMPLES Schema-defined GraphQL samples"
   }
 }
