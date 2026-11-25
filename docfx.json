@@ -8,6 +8,7 @@
         ],
         "exclude": [
           "_site/**",
+          ".markdown-copies/**",
           "content/**",
           "node_modules/**"
         ]
