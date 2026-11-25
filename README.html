@@ -136,6 +136,7 @@ npm run dev
 │   ├── introduction.md
 │   ├── getting-started.md
 │   └── toc.yml
+├── lib/                            # Markdown copies formatter + shared decorators
 ├── scripts/
 │   ├── custom-docfx-mdx.mjs        # Custom MDX formatter (badge colors, page H1 title)
 │   └── generate-docs.mjs           # GraphQL-Markdown runner
@@ -163,6 +164,9 @@ npm run dev
 <li><code>template/public/main.css</code> restyles the formatter output (entity chips, pill badges, field rows, code blocks, alerts) using Bootstrap theme variables, so it follows DocFX's light/dark switch.</li>
 <li><code>toc.yml</code> files in <code>docs/graphql/</code> are generated at doc-generation time and should not be edited manually.</li>
 </ul>
+<h2 id="markdown-copies">Markdown copies</h2>
+<p>Each generated page links to a plain Markdown copy of itself (&quot;View as Markdown&quot;). <code>npm run generate</code> runs <code>scripts/generate-copies.mjs</code> after the docs, with its own formatter in <code>lib/markdown-copy.mjs</code>; the build copies <code>.markdown-copies/</code> into <code>_site/docs/</code>, next to the pages. For example, <code>/docs/graphql/types/objects/project.html</code> has its copy at <code>/docs/graphql/types/objects/project.md</code>.</p>
+<p>Deprecation reasons also link backticked type names to their pages (for example &quot;Replaced by the <code>ProjectStatus</code> enum&quot; links to the enum), through the <code>beforePrintTypeHook</code> and <code>formatMDXAdmonition</code> overrides in <code>scripts/custom-docfx-mdx.mjs</code>. Type-level <code>@deprecatedType</code> directives get a badge and a notice from the decorators in <code>lib/decorators.mjs</code>, used by both outputs.</p>
 
 </article>
 
