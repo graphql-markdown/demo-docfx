@@ -49,6 +49,7 @@ dotnet tool install -g docfx
 │   ├── introduction.md
 │   ├── getting-started.md
 │   └── toc.yml
+├── lib/                            # Markdown copies formatter + shared decorators
 ├── scripts/
 │   ├── custom-docfx-mdx.mjs        # Custom MDX formatter (badge colors, page H1 title)
 │   └── generate-docs.mjs           # GraphQL-Markdown runner
@@ -73,3 +74,9 @@ dotnet tool install -g docfx
 - Badge colors can be customized in `scripts/custom-docfx-mdx.mjs` by spreading `BADGE_CLASS_MAP` and overriding individual entries.
 - `template/public/main.css` restyles the formatter output (entity chips, pill badges, field rows, code blocks, alerts) using Bootstrap theme variables, so it follows DocFX's light/dark switch.
 - `toc.yml` files in `docs/graphql/` are generated at doc-generation time and should not be edited manually.
+
+## Markdown copies
+
+Each generated page links to a plain Markdown copy of itself ("View as Markdown"). `npm run generate` runs `scripts/generate-copies.mjs` after the docs, with its own formatter in `lib/markdown-copy.mjs`; the build copies `.markdown-copies/` into `_site/docs/`, next to the pages. For example, `/docs/graphql/types/objects/project.html` has its copy at `/docs/graphql/types/objects/project.md`.
+
+Deprecation reasons also link backticked type names to their pages (for example "Replaced by the `ProjectStatus` enum" links to the enum), through the `beforePrintTypeHook` and `formatMDXAdmonition` overrides in `scripts/custom-docfx-mdx.mjs`. Type-level `@deprecatedType` directives get a badge and a notice from the decorators in `lib/decorators.mjs`, used by both outputs.
